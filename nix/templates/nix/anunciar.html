@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>Nix Auto --Anunciar </title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="static/css/estilo.css">
+
+</head>
+<body>
+	<!-- Container Principal-->
+	<div id="main">
+		<!--Header-->
+		<div id="header">
+			<!--Menu-->
+			<div id="logo">
+				<h1>Auto<span id="branco">Nix</span></h1>
+				<h5>Classi<span id="branco">ficados</span></h5>
+			</div>
+			<!--Menu-->
+			<!-- Area do Menu-->
+			<div id="menu">
+				<a href="index.html">Home</a>
+				<a href="carro.html">Carros</a>
+				<a href="motos.html">Motos</a>
+				<a href="anunciar.html">Como Anunciar seus veiculos</a>
+				<a href="contato.html">Contatos</a>
+			</div>
+			<!-- Final da area de Menu-->
+		</div>
+		<!--fim Header-->
+		<!-- Formulário de Anuncio -->
+
+		<div style=" width: 50%; margin-left: 300px; border: 1px solid red">
+			<h4 style="line-height:50px">Cadastro de Anúncio</h4>
+			<form  action = "" method = "POST">
+				{% csrf_token %}
+				<ul style=" list-style: none;  margin: 30px;">
+					{{ form.as_ul }}
+				</ul>
+				<input style="float: right" type="submit" value="Anunciar">
+			</form>
+		</div>	
+	</div>
+
+
+
+</body>
+</html>

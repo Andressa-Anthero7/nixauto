@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    {%for anuncio in posts %}
+     <div style="border:1px solid red">
+        <div>Titulo : {{ anuncio.titulo }}</div>
+        <div>Marca : {{ anuncio.marca }}</div>
+        <div>Modelo : {{ anuncio.modelo }}</div>
+        <div>Ano : {{ anuncio.ano }}</div>
+        <div>Valor : {{ anuncio.valor }}</div>
+        <div>Anunciante : {{ anuncio.anunciante }}</div>
+     </div>
+    {% endfor %}
+
+</body>
+</html>

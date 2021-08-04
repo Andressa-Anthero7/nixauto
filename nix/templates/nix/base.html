@@ -1,0 +1,492 @@
+{% load static %}
+
+<!doctype html>
+<html lang="pt-br">
+  <head>
+
+      
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--Estilo Css -->
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Fontawesome CSS -->
+    <script src="https://kit.fontawesome.com/a69cec9c91.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+
+    <style type="text/css">
+
+      *{
+    margin:0;
+    padding:0;
+  }
+
+  body{
+    font-size: 1em;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: #e6e6e6;
+  }
+
+  #main{
+    width:1080px;
+    height:2000px;
+
+  }
+
+
+  /*Formatação Head */
+  .bg-header{
+    background-color: #8000ff;
+    padding: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom-right-radius: 100px;
+
+  }
+
+  #logo{
+    font-size: 1.5em;
+    padding: 10px;
+  }
+
+  .menu{
+    padding-right:200px;
+    padding-right: 0px;
+  }
+
+  /*Formatação Menu*/
+
+  a{
+    color:#f7b600;
+    text-decoration: none;
+
+  }
+
+  a:link, a:visited {
+    color:#f7b600;
+
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  #header a:link, #header a:visited {
+    color:#FFF;
+    padding: 6px 12px 6px 12px;
+  }
+
+  .btn-menu a:hover {
+    color:black;
+    background: #FFF;
+    text-decoration: none;
+    border-radius:40px;
+  }
+
+
+
+  /*Formatação coluna de busca*/
+
+
+  #col-busca{
+
+
+    margin-left: 0px;
+    margin-top: 0px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+  }
+
+  h3{
+    padding: 10px;
+
+  }
+
+  }
+
+  #anuncios{
+    float: right;
+    display: inline;
+    width: auto;
+
+
+  }
+
+  #caixa-selecao{
+    width: 200px;
+    margin-top: 5px;
+    margin-bottom:10px;
+    margin-left:10px;
+    padding:5px;
+    border-radius: 10px;
+  }
+
+  #ultima-caixa{
+    width: 230px;
+    margin-bottom:0px;
+    margin-left:22px;
+    padding:5px;
+    border-radius: 10px;
+
+  }
+
+  /*Formatação area de anuncios*/
+
+  .display-anuncios{
+    width:860px;
+    height:3000px;
+    display:inline;
+    float: right;
+    margin-top: 10px;
+    background: #CCC;
+    border-radius:40px;
+    border:1px solid red;
+
+  }
+
+  .titulo-anuncio{
+    /*border: 1px solid red;*/
+    text-align: center;
+    padding-top:5px;
+    margin-bottom: 5px;
+   }
+
+
+
+  .anuncio{
+    width:auto;
+    height: 50px;
+    margin-right:10px;
+    margin-bottom: 50px;
+
+
+  }
+
+
+
+
+
+
+
+  .formato-foto{
+    margin-left: 5px;
+    margin-right: 5px;
+    width:320px;
+    height:280px;
+    border:1px solid #CCC;
+    border-radius: 5px;
+  }
+
+  .formato-preco{
+    margin-left: 8px;
+
+
+  }
+  .botao{
+    width: 170px;
+    height: 25px;
+    border-radius: 10px;
+    margin-right: 15px;
+    font-style: bold;
+    background:#f7b600;
+    float: right;
+    display:block;
+
+  }
+
+  .botao-contato{
+    float: right;
+    display: block;
+    margin-right: 50px;
+    margin-top: 30px;
+    text-decoration: none;
+    border:1px solid red;
+  }
+
+
+
+  .botao a{
+    color:black;
+  }
+
+  .autor-anuncio{
+    width: 320px;
+    color:black;
+    font-style: bold;
+    font-size: 0.5em;
+    margin-left: 8px;
+    border-bottom: 5px;
+
+
+  }
+
+
+  /*Formatação de cores */
+
+  #branco{
+    color:white;
+  }
+
+
+  #vermelho{
+
+    border:1px solid black;
+
+  }
+
+  /*Formatação do Formulario*/
+
+
+
+
+
+  .linha{
+    color:black;
+  }
+
+  /*Formatação rodapé*/
+
+  #rodape{
+    width: 100%;
+    height:120px;
+    float:bottom;
+    background:  #8000ff;
+    border-top-right-radius:100px;
+  }
+   #rodape3{
+    float: bottom;
+   }
+
+  /*coluna anuncios*/
+
+  .coluna-anuncios{
+    width: 260px;
+    height:410px;
+    background:#f7b600;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+  } 
+
+
+  
+
+
+
+
+
+        #insta {
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 0%, #fd5949 20%, #d6249f 60%, #285AEB 90%);
+                -webkit-background-clip: text;
+                /* Also define standard property for compatibility */
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+  
+               
+
+                border-color: black;
+  
+            }
+
+            .logo-midias{
+              float: right;
+            }
+
+    </style>
+
+    
+
+  </head>
+
+  <body class="w-auto" >
+    <div class="container-fluid clearfix" >
+      <div class="row" >
+      <nav class="navbar navbar-expand-lg navbar-dark  bg-header col-10  " >
+        <!--Logo -->
+        <div class="navbar-brand ml-0"><div id="logo">
+        <h1>Auto<span style="color: black;  ">Nix</span></h1>
+        <h5>Classi<span id="branco">ficados</span></h5>
+        </div>
+        </div>
+        <!--Menu Hamburguer -->
+        <button class="navbar-toggler mr-4 bg-warning " data-toggle="collapse" data-target="#navegacao">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--Navegação -->
+        <div class="collapse navbar-collapse col-6   " id="navegacao" >
+            <ul class="navbar-nav mx-4  " >
+                <li class="nav-item mr-3">
+                    <a href="" class="nav-link btn btn-warning text-dark ">Home</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a href="" class="nav-link  btn btn-warning text-dark">Carros</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a href="" class="nav-link  btn btn-warning text-dark">Motos</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a href="" class="nav-link  btn btn-warning text-dark">Anunciar</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a href="" class="nav-link  btn btn-warning text-dark">Contatos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+      <!-- Links Redes Sociais -->
+          <span  class="col-1 aling-self-center"  >
+          <!-- Link Instagram -->
+          <i class="fab fa-instagram   display-4 m-2  "  id="insta" aria-hidden="true"></i>
+
+          <!-- Link Facebook -->
+          <i class="fab fa-facebook-square display-4  m-2 " style="color: #3b5998;"></i>
+          </span>
+    </div>
+
+
+    <!-- Inicio Coluna Busca -->   
+     <nav class=" navbar navbar-expand-lg bg-warning rounded pr-4 pl-5 mr-4 ml-5  " style="border:1px solid red;">
+
+
+        <!--Opçoes de veiculos-->
+        <select class=""  id="caixa-selecao"name="veiculo" id="veiculo" onchange="AbrirSecao(this.value)">
+          <option value="*" selected>Veiculos</option>
+          <option value="carro.html">Carro</option>
+          <option>Moto</option>
+          <option>Caminhão</option>
+          <option>Nautica</option>
+        </select>
+
+        <!--Marca-->
+        <select id="caixa-selecao">
+          <option value="*" selected>Marca</option>
+          <option>AUDI</option>
+          <option>BMW</option>
+          <option>CAOA CHERY</option>
+          <option>CHEVROLET</option>
+          <option>CRYSLER</option>
+          <option>CITRÖEN</option>
+          <option>DODGE</option>
+          <option>FIAT</option>
+          <option>FORD</option>
+          <option>HONDA</option>
+          <option>HYUNDAI</option>
+          <option>JAC</option>
+          <option>JAGUAR</option>
+          <option>JEEP</option>
+          <option>KIA</option>
+          <option>LAND ROVER</option>
+          <option>MERCEDE-BENZ</option>
+          <option>MITSUBISHI</option>
+          <option>NISSAN</option>
+          <option>PEGEOUT</option>
+          <option>AUDI</option>
+          <option>RENAULT</option>
+          <option>SUZUKI</option>
+          <option>TOYOTA</option>
+          <option>TROLLER</option>
+          <option>VOLKSWAGEM</option>
+          <option>VOLVO</option>
+          <option>YAMAHA</option>
+        </select>
+        <!--Ano-->
+        <select id="caixa-selecao">
+          <option value="*" selected>Ano</option>
+          <option>2021</option>
+          <option>2020</option>
+          <option>2019</option>
+          <option>2018</option>
+          <option>2017</option>
+          <option>2016</option>
+          <option>2015</option>
+          <option>2014</option>
+          <option>2013</option>
+          <option>2012</option>
+          <option>2011</option>
+          <option>2010</option>
+          <option>2009</option>
+          <option>2008</option>
+          <option>2007</option>
+          <option>2006</option>
+          <option>2005</option>
+          <option>2004</option>
+          <option>2003</option>
+          <option>2002</option>
+          <option>2001</option>
+          <option>2000</option>
+          <option>1999</option>
+        </select>
+
+        <!--Modelo-->
+        <select id="caixa-selecao">
+          <option value="*" selected>Modelo</option>
+          <option value="carro">Carro</option>
+          <option>Moto</option>
+          <option>Caminhão</option>
+          <option>Nautica</option>
+        </select>
+        <!--Cor-->
+        <select id="caixa-selecao">
+          <option value="*" selected>Cor</option>
+          <option>Carro</option>
+          <option>Moto</option>
+          <option>Caminhão</option>
+          <option>Nautica</option>
+        </select>
+      </nav>
+    
+     <!--Fim Coluna busca -->  
+
+    
+        <!--Conteudo -->
+		{% block content %}{% endblock %}
+		<!--Fim do Conteudo-->
+
+   <footer class="text-center bg-warning h-auto  " style="font-size: 1em">
+    <div>Desenvolvido por Antherus Desenvolvimento Web</div>
+
+    <div style="font-size: 0.8em;">www.antherus.com.br</div>
+    <!-- Links Redes Sociais -->
+          <div  class=" aling-self-center float-right mx-5"  >
+          <!-- Link Instagram -->
+          <i class="fab fa-instagram   display-5 ml-3  "  id="insta" aria-hidden="true"></i><span class=" m-1">@nixauto</span>
+
+          
+          </div>
+
+          <span  class="col-1 aling-self-center float-right"  >
+            <!-- Link Facebook -->
+          <i class="fab fa-facebook-square display-5  mx-1 " style="color: #3b5998;">/nixauto</i>
+          </span>
+  </footer>
+
+	
+
+
+
+
+     
+
+   
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

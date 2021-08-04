@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    {% extends 'nix/base.html' %}
+    <title>{% block title %}Nix Auto{% endblock %}</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+
+       <!--Container principal-->
+	<div id="main">
+		<!--Header-->
+		<div id="header">
+			<!--Menu-->
+			<div id="logo">
+				<h1>Auto<span id="branco">Nix</span></h1>
+				<h5>Classi<span id="branco">ficados</span></h5>
+			</div>
+			<!--Menu-->
+			<!-- Area do Menu-->
+			<div id="menu">
+				<a href="index.html">Home</a>
+				<a href="carro.html">Carros</a>
+				<a href="motos.html">Motos</a>
+				<a href="anunciar.html">Como Anunciar seus veiculos</a>
+				<a href="contato.html">Contatos</a>
+			</div>
+			<!-- Final da area de Menu-->
+		</div>
+		<!--fim Header-->
+    <!--Display Anuncios-->
+			{% block content %}
+
+			<div style=" height:auto;border:1px solid red"  class="display-anuncios">
+
+				<!--Inicio da Table -->
+
+				<table >
+					<!-- Linha 1 da tabela-->
+					{%for anuncio in posts %}
+					<tr >
+						<!--Anuncio 1 da linha 1-->
+
+						<td  style=" width:1080px; border:1px solid red" class="anuncio">
+
+
+						<div style="border:3px solid black">
+							<div class="titulo-anuncio">{{anuncio}}</div>
+							
+							<img class="formato-foto" src="{{anuncio.imagem.url}}">
+							
+							<a href=""><button  > Detalhes do Veiculo</button></a>
+							
+					    </div>
+						<div style="border:1px solid green">
+							<div style="border:1px solid green"> <span style="border:1px solid red" class="autor-anuncio">Anunciante : {{ anuncio.anunciante }} 	</span><span style=" margin: 10px;float:right; margin: 0px; border:1px solid green">Valor: {{anuncio.valor}}</span></div>
+					    </div>
+						</td>
+
+
+						<!--Fim do nix-->
+
+						<!--Anuncio 1 da linha 1-->
+
+						<td  style=" width:1080px; border:1px solid red" class="anuncio">
+
+
+						<div style="border:3px solid black">
+							<div class="titulo-anuncio">{{anuncio}}</div>
+							
+							<img class="formato-foto" src="{{anuncio.imagem.url}}">
+							
+							<a href=""><button  > Detalhes do Veiculo</button></a>
+							
+					    </div>
+						<div style="border:1px solid green">
+							<div style="border:1px solid green"> <span style="border:1px solid red" class="autor-anuncio">Anunciante : {{ anuncio.anunciante }} 	</span><span style=" margin: 10px;float:right; margin: 0px; border:1px solid green">Valor: {{anuncio.valor}}</span></div>
+					    </div>
+						</td>
+
+
+						<!--Fim do nix-->
+
+						<!--Anuncio 1 da linha 1-->
+
+						<td  style=" width:1080px; border:1px solid red" class="anuncio">
+
+
+						<div style="border:3px solid black">
+							<div class="titulo-anuncio">{{anuncio}}</div>
+							
+							<img class="formato-foto" src="{{anuncio.imagem.url}}">
+							
+							<a href=""><button  > Detalhes do Veiculo</button></a>
+							
+					    </div>
+						<div style="border:1px solid green">
+							<div style="border:1px solid green"> <span style="border:1px solid red" class="autor-anuncio">Anunciante : {{ anuncio.anunciante }} 	</span><span style=" margin: 10px;float:right; margin: 0px; border:1px solid green">Valor: {{anuncio.valor}}</span></div>
+					    </div>
+						</td>
+
+
+						<!--Fim do nix-->
+					</tr>
+					{% endfor %}
+				</table>
+
+			</div>
+
+			{% endblock%}
+
+
+		<!--Final do Display Anuncios-->
+
+       <!-- Area de busca-->
+			<div id="col-busca">
+				<h3>Procura por: </h3>
+				<select id="caixa-selecao" name="opcao" id="opcao" onchange="AbrirSecao(this.value)">
+					<option value="*" selected>Compra/Venda</option>
+					<option value="carro.html">Compra</option>
+					<option value="venda.html">Venda</option>
+				</select>
+				<!--Opçoes de veiculos-->
+				<select id="caixa-selecao"name="veiculo" id="veiculo" onchange="AbrirSecao(this.value)">
+					<option value="*" selected>Veiculos</option>
+					<option value="carro.html">Carro</option>
+					<option>Moto</option>
+					<option>Caminhão</option>
+					<option>Nautica</option>
+				</select>
+
+				<!--Marca-->
+				<select id="caixa-selecao">
+					<option value="*" selected>Marca</option>
+					<option>AUDI</option>
+					<option>BMW</option>
+					<option>CAOA CHERY</option>
+					<option>CHEVROLET</option>
+					<option>CRYSLER</option>
+					<option>CITRÖEN</option>
+					<option>DODGE</option>
+					<option>FIAT</option>
+					<option>FORD</option>
+					<option>HONDA</option>
+					<option>HYUNDAI</option>
+					<option>JAC</option>
+					<option>JAGUAR</option>
+					<option>JEEP</option>
+					<option>KIA</option>
+					<option>LAND ROVER</option>
+					<option>MERCEDE-BENZ</option>
+					<option>MITSUBISHI</option>
+					<option>NISSAN</option>
+					<option>PEGEOUT</option>
+					<option>AUDI</option>
+					<option>RENAULT</option>
+					<option>SUZUKI</option>
+					<option>TOYOTA</option>
+					<option>TROLLER</option>
+					<option>VOLKSWAGEM</option>
+					<option>VOLVO</option>
+					<option>YAMAHA</option>
+				</select>
+				<!--Ano-->
+				<select id="caixa-selecao">
+					<option value="*" selected>Ano</option>
+					<option>2021</option>
+					<option>2020</option>
+					<option>2019</option>
+					<option>2018</option>
+					<option>2017</option>
+					<option>2016</option>
+					<option>2015</option>
+					<option>2014</option>
+					<option>2013</option>
+					<option>2012</option>
+					<option>2011</option>
+					<option>2010</option>
+					<option>2009</option>
+					<option>2008</option>
+					<option>2007</option>
+					<option>2006</option>
+					<option>2005</option>
+					<option>2004</option>
+					<option>2003</option>
+					<option>2002</option>
+					<option>2001</option>
+					<option>2000</option>
+					<option>1999</option>
+				</select>
+
+				<!--Modelo-->
+				<select id="caixa-selecao">
+					<option value="*" selected>Modelo</option>
+					<option value="carro">Carro</option>
+					<option>Moto</option>
+					<option>Caminhão</option>
+					<option>Nautica</option>
+				</select>
+				<!--Cor-->
+				<select id="caixa-selecao">
+					<option value="*" selected>Cor</option>
+					<option>Carro</option>
+					<option>Moto</option>
+					<option>Caminhão</option>
+					<option>Nautica</option>
+				</select>
+			</div>
+    </div>
+       <!--Fim container-->
+
+       <!--Anunciantes-->
+       <div class="coluna-anuncios">
+		aNUNCIOS
+	</div>
+
+
+
+</body>
+</html>
