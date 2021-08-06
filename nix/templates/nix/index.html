@@ -449,25 +449,27 @@
 
     
      {% block content %}
-     
+     {%for anuncio in posts %}
      <!--Anuncios-->
     <div class="card-columns col-12   bg-header rounded " style="border: 1px solid red;">
-      {%for anuncio in posts %}
+      
      <!--Anuncio 1 -->
-      <div class="card col-lg-12   mb-2 p-1  " style="border: 1px solid red;">
+      <div class="card col-12   mb-2   " style="border: 1px solid red;">
       <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="https://i.ibb.co/njGSB03/Whats-App-Image-2021-08-04-at-17-58-55.jpg" alt="Whats-App-Image-2021-08-04-at-17-58-55" border="0">
+      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
             <div>
               
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm float-right m-0 d-inline"  href="">Detalhes do Veículos</a>
-              <div class="m-0 d-inline" style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
             </div>
       </div>
       <!--Fim Colunas -->
-    {% endfor %}
+
+      
+    
     </div>
-       
+       {% endfor %}
       {% endblock%}
 
    <footer class="text-center bg-warning pb-3  " style="font-size: 1em">
