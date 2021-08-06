@@ -12,7 +12,7 @@
 
     <!--Estilo Css -->
     
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -313,52 +313,49 @@
   <body class="w-auto" >
     <div class="container-fluid clearfix" >
       <div class="row" >
-      <nav class="navbar navbar-expand-lg navbar-dark  bg-header col-10  " >
+      <nav class="navbar navbar-expand-md navbar-dark  bg-header col-12 mt-0 " >
         <!--Logo -->
-        <div class="navbar-brand ml-0"><div id="logo">
-        <h1>Auto<span style="color: black;  ">Nix</span></h1>
-        <h5>Classi<span id="branco">ficados</span></h5>
+        <div class="navbar-brand ml-2 mt-0"><div id="logo">
+        <h1 id="branco">Auto<span style="color: black;  ">Nix</span></h1>
+        <h3 style="color: black;">Classifi<span id="branco">cados</span></h3>
         </div>
         </div>
         <!--Menu Hamburguer -->
-        <button class="navbar-toggler mr-4 bg-warning " data-toggle="collapse" data-target="#navegacao">
+        <button class="navbar-toggler m-5 bg-warning" data-toggle="collapse" data-target="#navegacao2">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <!--Navegação -->
-        <div class="collapse navbar-collapse col-6   " id="navegacao" >
-            <ul class="navbar-nav mx-4  " >
-                <li class="nav-item mr-3">
-                    <a href="" class="nav-link btn btn-warning text-dark ">Home</a>
+        <div class="collapse navbar-collapse  ml-5" id="navegacao2">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item ">
+                    <a href="" class="nav-link btn btn-warning mr-5 text-dark">Home</a>
                 </li>
-                <li class="nav-item mr-3">
-                    <a href="" class="nav-link  btn btn-warning text-dark">Carros</a>
+
+                <li class="nav-item">
+                    <a href="" class="nav-link btn btn-warning mr-5 text-dark">Anunciar</a>
                 </li>
-                <li class="nav-item mr-3">
-                    <a href="" class="nav-link  btn btn-warning text-dark">Motos</a>
-                </li>
-                <li class="nav-item mr-3">
-                    <a href="" class="nav-link  btn btn-warning text-dark">Anunciar</a>
-                </li>
-                <li class="nav-item mr-3">
-                    <a href="" class="nav-link  btn btn-warning text-dark">Contatos</a>
+
+                <li class="nav-item">
+                    <a href="" class="nav-link btn btn-warning mr-5 text-dark">Fale Conosco</a>
                 </li>
             </ul>
+            
         </div>
     </nav>
       <!-- Links Redes Sociais -->
-          <span  class="col-1 aling-self-center"  >
+          <div  class="m-auto p-auto"  >
           <!-- Link Instagram -->
-          <i class="fab fa-instagram   display-4 m-2  "  id="insta" aria-hidden="true"></i>
-
+          <i class="fab fa-instagram   display-5 m-0 p-0  "  id="insta" ></i><span class="text-dark m-0 p-0" style="font-size:1em;">@nixauto</span>
+          <span class="mx-5"></span>
           <!-- Link Facebook -->
-          <i class="fab fa-facebook-square display-4  m-2 " style="color: #3b5998;"></i>
-          </span>
+          <i class="fab fa-facebook-square display-5  m-0 p-0 " style="color: #3b5998; ">/nixauto</i>
+          </div>
     </div>
 
 
     <!-- Inicio Coluna Busca -->   
-     <nav class=" navbar navbar-expand-lg bg-warning rounded pr-4 pl-5 mr-4 ml-5  " style="border:1px solid red;">
+     <nav class=" navbar navbar-expand-lg bg-warning rounded  row justify-content-around mt-3 style="border:1px solid red;">
 
 
         <!--Opçoes de veiculos-->
@@ -452,44 +449,42 @@
 
     
      {% block content %}
-     
+     {%for anuncio in posts %}
      <!--Anuncios-->
-    <div class="card-columns row  mt-3 pt-3 bg-header rounded" style="border: 1px solid red;">
-      {%for anuncio in posts %}
-      <!--Anuncio 1 -->
-      <div class="card col-lg-3 m-auto ">
+    <div class="card-columns col-12   bg-header rounded " style="border: 1px solid red;">
+      
+     <!--Anuncio 1 -->
+      <div class="card col-lg-12   mb-2 p-1  " style="border: 1px solid red;">
       <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top p-2" src="{{anuncio.imagem.url}}">
+      <img class="card-img-top  " src="https://i.ibb.co/njGSB03/Whats-App-Image-2021-08-04-at-17-58-55.jpg" alt="Whats-App-Image-2021-08-04-at-17-58-55" border="0">
             <div>
               
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm float-right mx-3 mb-3 d-inline"  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm float-right m-0 d-inline"  href="">Detalhes do Veículos</a>
               <div class="m-0 d-inline" style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
-        </div>
+            </div>
       </div>
+      <!--Fim Colunas -->
 
-
-
-      {% endfor %}
-    </div><!--Fim Colunas -->
-      
+    </div>
+       {% endfor %}
       {% endblock%}
 
-   <footer class="text-center bg-warning h-auto  " style="font-size: 1em">
-    <div>Desenvolvido por Antherus Desenvolvimento Web</div>
+   <footer class="text-center bg-warning pb-3  " style="font-size: 1em">
+    <div  class="pt-2 px-3"> Desenvolvido por Antherus Desenvolvimento Web</div>
 
     <div style="font-size: 0.8em;">www.antherus.com.br</div>
     <!-- Links Redes Sociais -->
-          <div  class=" aling-self-center float-right mx-5"  >
+          <span class=" aling-self-center "  >
           <!-- Link Instagram -->
-          <i class="fab fa-instagram   display-5 ml-3  "  id="insta" aria-hidden="true"></i><span class=" m-1">@nixauto</span>
+          <i class="fab fa-instagram   display-5 ml-3  "  id="insta" aria-hidden="true"></i><span class=" m-1">@antherus</span>
 
           
-          </div>
+          </span>
 
-          <span  class="col-1 aling-self-center float-right"  >
+          <span  class="col-1 aling-self-center "  >
             <!-- Link Facebook -->
-          <i class="fab fa-facebook-square display-5  mx-1 " style="color: #3b5998;">/nixauto</i>
+          <i class="fab fa-facebook-square display-5  mx-1 " style="color: #3b5998;">/antherus</i>
           </span>
   </footer>
 
@@ -506,6 +501,6 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
   </body>
 </html>
