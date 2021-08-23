@@ -11,8 +11,8 @@ import random
 # Create your views here.
 
 def index(request):
-    posts = list(Anuncio.objects.all())
-    posts = random.sample(posts, 9)
+    posts = Anuncio.objects.all()
+    posts = random.sample(posts.items(), 9)
     return render(request, 'nix/index.html',{'posts': posts})
 
 
