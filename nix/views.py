@@ -5,6 +5,8 @@ from django.shortcuts import render
 from nix.forms import CriarAnuncioForms
 from .models import Anuncio
 
+import random 
+
 
 # Create your views here.
 
