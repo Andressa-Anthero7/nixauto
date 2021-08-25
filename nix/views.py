@@ -12,8 +12,9 @@ import random
 
 def index(request):
     posts = Anuncio.objects.order_by('?')
+    carousel = Anuncio.objects.order_by('?')[:3]
 
-    return render(request, 'nix/index.html',{'posts': posts})
+    return render(request, 'nix/index.html',{'posts': posts, 'fotos':carousel})
 
 
 def anunciar(request):
