@@ -2,7 +2,7 @@
 <html lang="pt-br">
   <head>
 
-    <meta http-equiv="refresh" content="20;URL=http://devnixauto.pythonanywhere.com/" />
+    <!--<meta http-equiv="refresh" content="20;URL=http://127.0.0.0:8000/" />-->
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -425,9 +425,23 @@
                     <a href="" class="nav-link btn btn-warning mr-5 text-dark">Fale Conosco</a>
                 </li>
             </ul>
+
+
             
         </div>
+
+       
+
     </nav>
+
+      <!-- Formulário inline -->
+    <form class="form-inline bg-warning m-auto container-fluid rounded">
+        <input class="form-control col-8 col-lg-9  ml-0 mr-5  my-2" type="text" placeholder="Pesquisar">
+
+        <div class=""></div><input class=" btn btn-primary btn-sm   px-0 py-1 col-2   " type="submit" value="Pesquisar">
+    </form>
+    <br>
+
       <!-- Links Redes Sociais -->
           <div  class="m-auto p-auto"  >
           <!-- Link Instagram -->
@@ -439,103 +453,11 @@
     </div>
 
 
-    <!-- Inicio Coluna Busca -->   
-     <nav class=" navbar navbar-expand-lg bg-warning rounded  row justify-content-around mt-3 style="border:1px solid red;">
-
-
-        <!--Opçoes de veiculos-->
-        <select class=""  id="caixa-selecao"name="veiculo" id="veiculo" onchange="AbrirSecao(this.value)">
-          <option value="*" selected>Veiculos</option>
-          <option value="carro.html">Carro</option>
-          <option>Moto</option>
-          <option>Caminhão</option>
-          <option>Nautica</option>
-        </select>
-
-        <!--Marca-->
-        <select id="caixa-selecao">
-          <option value="*" selected>Marca</option>
-          <option>AUDI</option>
-          <option>BMW</option>
-          <option>CAOA CHERY</option>
-          <option>CHEVROLET</option>
-          <option>CRYSLER</option>
-          <option>CITRÖEN</option>
-          <option>DODGE</option>
-          <option>FIAT</option>
-          <option>FORD</option>
-          <option>HONDA</option>
-          <option>HYUNDAI</option>
-          <option>JAC</option>
-          <option>JAGUAR</option>
-          <option>JEEP</option>
-          <option>KIA</option>
-          <option>LAND ROVER</option>
-          <option>MERCEDE-BENZ</option>
-          <option>MITSUBISHI</option>
-          <option>NISSAN</option>
-          <option>PEGEOUT</option>
-          <option>AUDI</option>
-          <option>RENAULT</option>
-          <option>SUZUKI</option>
-          <option>TOYOTA</option>
-          <option>TROLLER</option>
-          <option>VOLKSWAGEM</option>
-          <option>VOLVO</option>
-          <option>YAMAHA</option>
-        </select>
-        <!--Ano-->
-        <select id="caixa-selecao">
-          <option value="*" selected>Ano</option>
-          <option>2021</option>
-          <option>2020</option>
-          <option>2019</option>
-          <option>2018</option>
-          <option>2017</option>
-          <option>2016</option>
-          <option>2015</option>
-          <option>2014</option>
-          <option>2013</option>
-          <option>2012</option>
-          <option>2011</option>
-          <option>2010</option>
-          <option>2009</option>
-          <option>2008</option>
-          <option>2007</option>
-          <option>2006</option>
-          <option>2005</option>
-          <option>2004</option>
-          <option>2003</option>
-          <option>2002</option>
-          <option>2001</option>
-          <option>2000</option>
-          <option>1999</option>
-        </select>
-
-        <!--Modelo-->
-        <select id="caixa-selecao">
-          <option value="*" selected>Modelo</option>
-          <option value="carro">Carro</option>
-          <option>Moto</option>
-          <option>Caminhão</option>
-          <option>Nautica</option>
-        </select>
-        <!--Cor-->
-        <select id="caixa-selecao">
-          <option value="*" selected>Cor</option>
-          <option>Carro</option>
-          <option>Moto</option>
-          <option>Caminhão</option>
-          <option>Nautica</option>
-        </select>
-      </nav>
-    
-     <!--Fim Coluna busca -->  
-
+   
     
      {% block content %}
 
-    <div class="container-fluid my-5 col-xs-12 d-none d-md-block"  >
+    <div class="container-fluid my-0 col-xs-12 d-none d-md-block"  >
     <div id="carouselExample" class="carousel slide col-sm-12" data-ride="carousel" data-interval="9000">
         <div class="carousel-inner col-sm-12  w-10 mxauto" role="listbox">
             <div class="card-columns  carousel-item active bg-warning rounded " style="border: 1px solid blue;">
