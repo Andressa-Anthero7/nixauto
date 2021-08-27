@@ -13,9 +13,14 @@ import random
 def index(request):
     posts = Anuncio.objects.order_by('?')
     carousel = Anuncio.objects.order_by('?')[:3]
-    carousel_mobile = Anuncio.objects.order_by('?')[:1]
+    carousel_mobile1 = Anuncio.objects.order_by('?')[:1]
+    carousel_mobile2 = Anuncio.objects.order_by('?')[:1]
+    carousel_mobile3 = Anuncio.objects.order_by('?')[:1]
+    carousel_mobile4 = Anuncio.objects.order_by('?')[:1]
+    carousel_mobile5 = Anuncio.objects.order_by('?')[:1]
+    carousel_mobile6 = Anuncio.objects.order_by('?')[:1]
 
-    return render(request, 'nix/index.html',{'posts': posts, 'fotos':carousel, 'carousel_mobile':carousel_mobile})
+    return render(request, 'nix/index.html',{'posts': posts, 'fotos':carousel, 'carousel_mobile1':carousel_mobile1, 'carousel_mobile2':carousel_mobile2, 'carousel_mobile3':carousel_mobile3, 'carousel_mobile4':carousel_mobile4, 'carousel_mobile5':carousel_mobile5, 'carousel_mobile6':carousel_mobile6}  )
 
 
 def anunciar(request):

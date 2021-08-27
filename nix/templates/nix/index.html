@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
-    <meta http-equiv="refresh" content="20;URL=http://nixauto.pythonanywhere.com/" />
+    <meta http-equiv="refresh" content="20;URL=http://127.0.0.1:8000/" />
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -710,7 +710,7 @@
     <div class="carousel-item m-auto active">
      <!--Anuncios-->
     <div class="row    bg-header rounded  " style="border: 1px solid blue;">
-      {%for anuncio in carousel_mobile %}
+      {%for anuncio in carousel_mobile1 %}
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2 mx-auto  " style="border: 1px solid red;">
       <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
@@ -719,7 +719,7 @@
               
               <div >Valor:{{anuncio.valor}}</div>
               <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
-              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
+              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}1</div>
             </div>
       </div>
       <!--Fim Anuncio 1 -->
@@ -732,7 +732,7 @@
     <div class="carousel-item">
      <!--Anuncios-->
     <div class="row    bg-header rounded  " style="border: 1px solid blue;">
-      {%for anuncio in carousel_mobile %}
+      {%for anuncio in carousel_mobile2 %}
      <!--Anuncio 1 -->
       <div class="card col-12  mb-2 mx-auto  " style="border: 1px solid red;">
       <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
@@ -752,7 +752,7 @@
     <div class="carousel-item">
       <!--Anuncios-->
     <div class="row    bg-header rounded  " style="border: 1px solid blue;">
-      {%for anuncio in carousel_mobile %}
+      {%for anuncio in carousel_mobile3 %}
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2 mx-auto  " style="border: 1px solid red;">
       <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
@@ -761,7 +761,67 @@
               
               <div >Valor:{{anuncio.valor}}</div>
               <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
-              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
+              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}3</div>
+            </div>
+      </div>
+      <!--Fim Anuncio 1 -->
+      {%endfor%}
+    </div>
+    </div>
+
+    <div class="carousel-item">
+      <!--Anuncios-->
+    <div class="row    bg-header rounded  " style="border: 1px solid blue;">
+      {%for anuncio in carousel_mobile4 %}
+     <!--Anuncio 1 -->
+      <div class="card col-12   mb-2 mx-auto  " style="border: 1px solid red;">
+      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+            <div>
+              
+              <div >Valor:{{anuncio.valor}}</div>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}3</div>
+            </div>
+      </div>
+      <!--Fim Anuncio 1 -->
+      {%endfor%}
+    </div>
+    </div>
+
+    <div class="carousel-item">
+      <!--Anuncios-->
+    <div class="row    bg-header rounded  " style="border: 1px solid blue;">
+      {%for anuncio in carousel_mobile5 %}
+     <!--Anuncio 1 -->
+      <div class="card col-12   mb-2 mx-auto  " style="border: 1px solid red;">
+      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+            <div>
+              
+              <div >Valor:{{anuncio.valor}}</div>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}3</div>
+            </div>
+      </div>
+      <!--Fim Anuncio 1 -->
+      {%endfor%}
+    </div>
+    </div>
+
+    <div class="carousel-item">
+      <!--Anuncios-->
+    <div class="row    bg-header rounded  " style="border: 1px solid blue;">
+      {%for anuncio in carousel_mobile6 %}
+     <!--Anuncio 1 -->
+      <div class="card col-12   mb-2 mx-auto  " style="border: 1px solid red;">
+      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+            <div>
+              
+              <div >Valor:{{anuncio.valor}}</div>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}3</div>
             </div>
       </div>
       <!--Fim Anuncio 1 -->
