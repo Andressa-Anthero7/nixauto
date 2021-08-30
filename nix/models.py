@@ -25,3 +25,5 @@ class Anuncio (models.Model):
 
 
 
+
+

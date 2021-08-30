@@ -55,7 +55,7 @@
     padding: 8px;
     margin-bottom: 20px;
     text-align: center;
-    border-bottom-right-radius: 100px;
+    border-bottom-right-radius: 30px;
 
   }
 
@@ -395,23 +395,27 @@
 
   </head>
 
-  <body class="w-auto" >
-    <div class="container-fluid clearfix" >
-      <div class="row" >
-      <nav class="navbar navbar-expand-md navbar-dark  bg-header col-12 mt-0 " >
-        <!--Logo -->
-        <div class="navbar-brand ml-2 mt-0"><div id="logo">
-        <h1 id="branco">Auto<span style="color: black;  ">Nix</span></h1>
-        <h3 style="color: black;">Classifi<span id="branco">cados</span></h3>
+  <body class="w-auto m-0" >
+    <div class="container-fluid mb-5 " >
+      <div class="row bg-header mt-0 mb-5" >
+      <nav class="navbar navbar-expand-md navbar-dark   col-12
+       mt-0    " >
+
+       <div class=" navbar-brand col-6 m-0 ml-0 p-0">
+        <div class="m-0 p-0" id="logo">
+        <h1 class="m-0 p-0" id="branco">Auto<span style="color: black;  ">Nix</span></h1>
+        <h3 class="m-0 p-0" style="color: black;">Classifi<span id="branco">cados</span></h3>
         </div>
-        </div>
+      </div>
+
+      <div class=" mt-5 ml-5 mb-4" style="float: right;" >
         <!--Menu Hamburguer -->
-        <button class="navbar-toggler m-5 bg-warning" data-toggle="collapse" data-target="#navegacao2">
+        <button class="navbar-toggler  bg-warning" data-toggle="collapse" data-target="#navegacao2">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <!--Navegação -->
-        <div class="collapse navbar-collapse  ml-5" id="navegacao2">
+        <div class="collapse navbar-collapse m-0 " id="navegacao2">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item ">
                     <a href="" class="nav-link btn btn-warning mr-5 text-dark">Home</a>
@@ -424,34 +428,46 @@
                 <li class="nav-item">
                     <a href="" class="nav-link btn btn-warning mr-5 text-dark">Fale Conosco</a>
                 </li>
-            </ul>
-
-
-            
+            </ul> 
         </div>
+      </div>
 
-       
+
+
+        
+
 
     </nav>
 
-      <!-- Formulário inline -->
-    <form class="form-inline bg-warning m-auto container-fluid rounded">
-        <input class="form-control col-8 col-lg-9  ml-0 mr-5  my-2" type="text" placeholder="Pesquisar">
+     <!-- Formulário inline -->
+      <div class=" col-12 d-block mb-4 ">
+         <form method="GET" class="" >
+        <input type="text"  class="form-control d-inline col-9   " placeholder="Pesquisar" name="search" id="search">
+        <div class="input-group-prepend d-inline mr-4 col-2  "  style="float: right;">
+          <button class="btn btn-outline-light bg-warning " type="submit" id="button-addon1">Buscar</button>
+        </div>
+      </form>
+      </div>
 
-        <div class=""></div><input class=" btn btn-primary btn-sm   px-0 py-1 col-2   " type="submit" value="Pesquisar">
-    </form>
-    <br>
+     
+     
 
-      <!-- Links Redes Sociais -->
-          <div  class="m-auto p-auto"  >
+
+    
+      
+    </div>
+          <div class="row">
+            <!-- Links Redes Sociais -->
+          <div  class="m-auto p-auto "  >
           <!-- Link Instagram -->
           <i class="fab fa-instagram   display-5 m-0 p-0  "  id="insta" ></i><span class="text-dark m-0 p-0" style="font-size:1em;">@nixauto</span>
           <span class="mx-5"></span>
           <!-- Link Facebook -->
           <i class="fab fa-facebook-square display-5  m-0 p-0 " style="color: #3b5998; ">/nixauto</i>
           </div>
-    </div>
 
+          </div>
+    
 
    
     
