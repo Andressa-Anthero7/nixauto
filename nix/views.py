@@ -4,6 +4,7 @@ from django.shortcuts import HttpResponseRedirect
 from django.shortcuts import render
 from nix.forms import CriarAnuncioForms
 from .models import Anuncio
+from django.db.models import Q
 
 import random 
 
@@ -11,7 +12,7 @@ import random
 # Create your views here.
 
 def index(request):
-    posts = Anuncio.objects.order_by('?')
+    posts = Anuncio.objects.order_by('?')[:3]
     carousel = Anuncio.objects.order_by('?')[:3]
     carousel_mobile1 = Anuncio.objects.order_by('?')[:1]
     carousel_mobile2 = Anuncio.objects.order_by('?')[:1]
@@ -19,6 +20,20 @@ def index(request):
     carousel_mobile4 = Anuncio.objects.order_by('?')[:1]
     carousel_mobile5 = Anuncio.objects.order_by('?')[:1]
     carousel_mobile6 = Anuncio.objects.order_by('?')[:1]
+
+    busca = request.GET.get('search')
+    if busca:
+        posts = Anuncio.objects.filter(
+            Q(titulo__icontains=busca)|Q(modelo__icontains=busca)|Q(marca__icontains=busca)|Q(ano__icontains=busca)|Q(valor__icontains=busca)|Q(anunciante__icontains=busca)
+        )
+
+
+
+
+
+
+
+
 
     return render(request, 'nix/index.html',{'posts': posts, 'fotos':carousel, 'carousel_mobile1':carousel_mobile1, 'carousel_mobile2':carousel_mobile2, 'carousel_mobile3':carousel_mobile3, 'carousel_mobile4':carousel_mobile4, 'carousel_mobile5':carousel_mobile5, 'carousel_mobile6':carousel_mobile6}  )
 

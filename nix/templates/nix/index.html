@@ -2,7 +2,7 @@
 <html lang="pt-br">
   <head>
 
-    <meta http-equiv="refresh" content="20;URL=http://devnixauto.pythonanywhere.com/" />
+    <meta http-equiv="refresh" content="60;URL=http://devnixauto.pythonanywhere.com/" />
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -11,7 +11,7 @@
      {% extends 'nix/base.html' %}
     <title>{% block title %}Nix Auto{% endblock %}</title>
 
-    
+
 
     <!--Estilo Css -->
 
@@ -55,7 +55,7 @@
     padding: 8px;
     margin-bottom: 20px;
     text-align: center;
-    border-bottom-right-radius: 30px;
+    border-bottom-right-radius: 10px;
 
   }
 
@@ -285,10 +285,10 @@
     margin-bottom: 10px;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
-  } 
+  }
 
 
-  
+
 
 
 
@@ -300,11 +300,11 @@
                 /* Also define standard property for compatibility */
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
-  
-               
+
+
 
                 border-color: black;
-  
+
             }
 
             .logo-midias{
@@ -327,20 +327,20 @@
             .carousel-inner .active + .carousel-item + .carousel-item {
                 display: block;
             }
-            
+
             .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
             .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
             .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
                 transition: none;
                 margin-right: initial;
             }
-            
+
             .carousel-inner .carousel-item-next,
             .carousel-inner .carousel-item-prev {
               position: relative;
               transform: translate3d(0, 0, 0);
             }
-            
+
             .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
                 position: absolute;
                 top: 0;
@@ -349,7 +349,7 @@
                 display: block;
                 visibility: visible;
             }
-            
+
             /* left or forward direction */
             .active.carousel-item-left + .carousel-item-next.carousel-item-left,
             .carousel-item-next.carousel-item-left + .carousel-item,
@@ -359,7 +359,7 @@
                 transform: translate3d(-100%, 0, 0);
                 visibility: visible;
             }
-            
+
             /* farthest right hidden item must be abso position for animations */
             .carousel-inner .carousel-item-prev.carousel-item-right {
                 position: absolute;
@@ -369,7 +369,7 @@
                 display: block;
                 visibility: visible;
             }
-            
+
             /* right or prev direction */
             .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
             .carousel-item-prev.carousel-item-right + .carousel-item,
@@ -386,7 +386,7 @@
 
     </style>
 
-    
+
 
 
 
@@ -395,13 +395,13 @@
 
   </head>
 
-  <body class="w-auto m-0" >
-    <div class="container-fluid mb-5 " >
+  <body class="w-auto mt-0" >
+    <div class="container-fluid mb-0 mt-0 " >
       <div class="row bg-header mt-0 mb-5" >
       <nav class="navbar navbar-expand-md navbar-dark   col-12
-       mt-0    " >
+       mt-0 mb-5    " >
 
-       <div class=" navbar-brand col-6 m-0 ml-0 p-0">
+       <div class=" navbar-brand col-6 m-0 ml-0 p-0 mt-0">
         <div class="m-0 p-0" id="logo">
         <h1 class="m-0 p-0" id="branco">Auto<span style="color: black;  ">Nix</span></h1>
         <h3 class="m-0 p-0" style="color: black;">Classifi<span id="branco">cados</span></h3>
@@ -428,223 +428,63 @@
                 <li class="nav-item">
                     <a href="" class="nav-link btn btn-warning mr-5 text-dark">Fale Conosco</a>
                 </li>
-            </ul> 
+            </ul>
         </div>
       </div>
-
-
-
-        
-
 
     </nav>
 
      <!-- Formulário inline -->
-      <div class=" col-12 d-block mb-4 ">
-         <form method="GET" class="" >
-        <input type="text"  class="form-control d-inline col-9   " placeholder="Pesquisar" name="search" id="search">
+      <div class=" col-12 d-block mb-3 p-0  " >
+         <form method="GET" class="mb-0" >
+        <input type="text"  class="form-control d-inline col-9   " placeholder="Pesquisar por TITULO MARCA MODELO ANO OU ANUNCIANTE" name="search" id="search">
         <div class="input-group-prepend d-inline mr-4 col-2  "  style="float: right;">
           <button class="btn btn-outline-light bg-warning " type="submit" id="button-addon1">Buscar</button>
         </div>
       </form>
       </div>
-
-     
-     
-
-
-    
-      
     </div>
-          <div class="row">
-            <!-- Links Redes Sociais -->
-          <div  class="m-auto p-auto "  >
-          <!-- Link Instagram -->
-          <i class="fab fa-instagram   display-5 m-0 p-0  "  id="insta" ></i><span class="text-dark m-0 p-0" style="font-size:1em;">@nixauto</span>
-          <span class="mx-5"></span>
-          <!-- Link Facebook -->
-          <i class="fab fa-facebook-square display-5  m-0 p-0 " style="color: #3b5998; ">/nixauto</i>
-          </div>
-
-          </div>
-    
-
-   
-    
      {% block content %}
 
-    <div class="container-fluid my-0 col-xs-12 d-none d-md-block"  >
-    <div id="carouselExample" class="carousel slide col-sm-12" data-ride="carousel" data-interval="9000">
-        <div class="carousel-inner col-sm-12  w-10 mxauto" role="listbox">
-            <div class="card-columns  carousel-item active bg-warning rounded " style="border: 1px solid blue;">
-      {%for anuncio in fotos %}
+     <!--Anuncios display-->
+        <h5 class="text-center col-12 mt-2 bg-warning rounded p-3 mb-0">Anuncios selecionados para você!!!</h5>
+
+    <div class="card-columns col-12    bg-header rounded mt-2 " style="border: 1px solid red;">
+
+
+      {%for anuncio in posts %}
+
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2   " style="border: 1px solid red;">
       <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+      <img class="card-img-top  " src="{{anuncio.imagem.url}}" style=" width:100%; height:100%;">
             <div>
-              
-              <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0  "  href="">Detalhes do Veículos</a>
-              <div class="m-0  " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
-            </div>
-      </div>
-      <!--Fim Colunas -->
 
-      
-    {% endfor %}
-    </div>
-
-           <div class="card-columns col-12  carousel-item  bg-warning rounded " style="border: 1px solid red;">
-      {%for anuncio in fotos %}
-     <!--Anuncio 1 -->
-      <div class="card col-12   mb-2   " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
-            <div>
-              
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm  m-0 col-md-12  "  href="">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
             </div>
       </div>
       <!--Fim Colunas -->
+        {% empty %}
 
-      
-    {% endfor %}
-    </div>
-
-            <div class="card-columns col-12  carousel-item  bg-warning rounded " style="border: 1px solid red;">
-      {%for anuncio in fotos %}
-     <!--Anuncio 1 -->
-      <div class="card col-12   mb-2   " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
-            <div>
-              
-              <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
-              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
-            </div>
-      </div>
-      <!--Fim Colunas -->
-
-      
-    {% endfor %}
-    </div>
-
-            <div class="card-columns col-12  carousel-item  bg-warning rounded " style="border: 1px solid red;">
-      {%for anuncio in fotos %}
-     <!--Anuncio 1 -->
-      <div class="card col-12   mb-2   " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
-            <div>
-              
-              <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
-              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
-            </div>
-      </div>
-      <!--Fim Colunas -->
-
-      
-    {% endfor %}
-    </div>
-
-            <div class="card-columns col-12  carousel-item  bg-warning rounded " style="border: 1px solid red;">
-      {%for anuncio in fotos %}
-     <!--Anuncio 1 -->
-      <div class="card col-12   mb-2   " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
-            <div>
-              
-              <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
-              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
-            </div>
-      </div>
-      <!--Fim Colunas -->
-
-      
-    {% endfor %}
-    </div>
-
-           <div class="card-columns col-12  carousel-item  bg-warning rounded " style="border: 1px solid red;">
-      {%for anuncio in fotos %}
-     <!--Anuncio 1 -->
-      <div class="card col-12   mb-2   " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
-            <div>
-              
-              <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
-              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
-            </div>
-      </div>
-      <!--Fim Colunas -->
-
-      
-    {% endfor %}
-    </div>
-
-           <div class="card-columns col-12  carousel-item  bg-warning rounded " style="border: 1px solid red;">
-      {%for anuncio in fotos %}
-     <!--Anuncio 1 -->
-      <div class="card col-12   mb-2   " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
-            <div>
-              
-              <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
-              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
-            </div>
-      </div>
-      <!--Fim Colunas -->
-
-      
-    {% endfor %}
-    </div>
-
-           <div class="card-columns col-12  carousel-item  bg-warning rounded " style="border: 1px solid red;">
-      {%for anuncio in fotos %}
-     <!--Anuncio 1 -->
-      <div class="card col-12   mb-2   " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
-            <div>
-              
-              <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
-              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
-            </div>
-      </div>
-      <!--Fim Colunas -->
-
-      
-    {% endfor %}
-    </div>
-
-    <a class="carousel-control-prev bg-light col-1" href="#carouselExample" role="button" data-slide="prev">
-            <i class="fa fa-chevron-left fa-lg text-muted bg-dark"></i>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next text-faded bg-light col-1 " href="#carouselExample" role="button" data-slide="next">
-            <i class="fa fa-chevron-right fa-lg text-muted bg-dark"></i>
-            <span class="sr-only">Next</span>
-        </a>
-
+        <div>
+            <h1>VEÍCULO NÃO ENCONTRADO</h1>
+            <h5>PROCURE POR:</h5>
+            <div> Modelo, Marca, Ano, Valor ou Anunciante !!</div>
+            <a  class="btn btn-outline-primary btn-sm  m-0 col-md-12  "  href="">Pesquisar Novamente</a>
         </div>
-        
+
+    {% endfor %}
     </div>
-</div>
-<!--final Carrousel principal -->
+       <!-- display -->
+
+
 
     <!--Carrousel mobile -->
-       <div id="carouselExampleControls" class="carousel slide d-md-none" data-ride="carousel">
+       <div id="carouselExampleControls" class="carousel slide d-md-none mt-3 bg-warning" data-ride="carousel">
+       <h3 class="text-center "> Top NixAutos</h3>
+        <h5 class="text-center">Um Giro de Ofertas TOP!!!</h5>
   <div class="carousel-inner">
 
     <div class="carousel-item m-auto active">
@@ -656,7 +496,7 @@
       <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
       <img class="card-img-top  " src="{{anuncio.imagem.url}}">
             <div>
-              
+
               <div >Valor:{{anuncio.valor}}</div>
               <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}1</div>
@@ -665,7 +505,7 @@
       <!--Fim Anuncio 1 -->
       {%endfor%}
     </div>
-    
+
   </div>
   <!--Fim de Anuncios -->
 
@@ -678,7 +518,7 @@
       <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
       <img class="card-img-top  " src="{{anuncio.imagem.url}}">
             <div>
-              
+
               <div >Valor:{{anuncio.valor}}</div>
               <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
@@ -698,7 +538,7 @@
       <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
       <img class="card-img-top  " src="{{anuncio.imagem.url}}">
             <div>
-              
+
               <div >Valor:{{anuncio.valor}}</div>
               <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}3</div>
@@ -718,7 +558,7 @@
       <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
       <img class="card-img-top  " src="{{anuncio.imagem.url}}">
             <div>
-              
+
               <div >Valor:{{anuncio.valor}}</div>
               <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}3</div>
@@ -738,7 +578,7 @@
       <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
       <img class="card-img-top  " src="{{anuncio.imagem.url}}">
             <div>
-              
+
               <div >Valor:{{anuncio.valor}}</div>
               <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}3</div>
@@ -758,7 +598,7 @@
       <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
       <img class="card-img-top  " src="{{anuncio.imagem.url}}">
             <div>
-              
+
               <div >Valor:{{anuncio.valor}}</div>
               <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}3</div>
@@ -778,7 +618,7 @@
     <span class="sr-only">Next</span>
   </a>
   </div>
-  
+
 </div>
 
        <!--Carrousel mobile final -->
@@ -786,29 +626,177 @@
 
 
 
-
-
-
-     
-     <!--Anuncios display-->
-       
-    <div class="card-columns col-12   bg-header rounded d-none d-md-block " style="border: 1px solid red;">
-      {%for anuncio in posts %}
+        <div class="container-fluid my-3 col-xs-12 d-none d-md-block bg-warning rounded "   >
+            <h1 class="text-center">Giro dos Tops</h1>
+            <h5 class="text-center">Ofertas selecionadas especialmente para você !!!</h5>
+    <div id="carouselExample" class="carousel slide col-sm-12 mt-2" data-ride="carousel" data-interval="9000">
+        <div class="carousel-inner col-sm-12  w-10 mxauto" role="listbox">
+            <div class="card-columns  carousel-item active bg-header rounded " style="border: 1px solid blue;">
+      {%for anuncio in fotos %}
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2   " style="border: 1px solid red;">
       <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
       <img class="card-img-top  " src="{{anuncio.imagem.url}}">
             <div>
-              
+
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 col-md-12  "  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm  m-0  "  href="">Detalhes do Veículos</a>
+              <div class="m-0  " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
+            </div>
+      </div>
+      <!--Fim Colunas -->
+
+
+    {% endfor %}
+    </div>
+
+           <div class="card-columns col-12  carousel-item  bg-header rounded " style="border: 1px solid red;">
+      {%for anuncio in fotos %}
+     <!--Anuncio 1 -->
+      <div class="card col-12   mb-2   " style="border: 1px solid red;">
+      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+            <div>
+
+              <div >Valor:{{anuncio.valor}}</div>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
             </div>
       </div>
       <!--Fim Colunas -->
+
+
     {% endfor %}
     </div>
-       <!-- display -->
+
+            <div class="card-columns col-12  carousel-item  bg-header rounded " style="border: 1px solid red;">
+      {%for anuncio in fotos %}
+     <!--Anuncio 1 -->
+      <div class="card col-12   mb-2   " style="border: 1px solid red;">
+      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+            <div>
+
+              <div >Valor:{{anuncio.valor}}</div>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
+            </div>
+      </div>
+      <!--Fim Colunas -->
+
+
+    {% endfor %}
+    </div>
+
+            <div class="card-columns col-12  carousel-item  bg-header rounded " style="border: 1px solid red;">
+      {%for anuncio in fotos %}
+     <!--Anuncio 1 -->
+      <div class="card col-12   mb-2   " style="border: 1px solid red;">
+      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+            <div>
+
+              <div >Valor:{{anuncio.valor}}</div>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
+            </div>
+      </div>
+      <!--Fim Colunas -->
+
+
+    {% endfor %}
+    </div>
+
+            <div class="card-columns col-12  carousel-item  bg-header rounded " style="border: 1px solid red;">
+      {%for anuncio in fotos %}
+     <!--Anuncio 1 -->
+      <div class="card col-12   mb-2   " style="border: 1px solid red;">
+      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+            <div>
+
+              <div >Valor:{{anuncio.valor}}</div>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
+            </div>
+      </div>
+      <!--Fim Colunas -->
+
+
+    {% endfor %}
+    </div>
+
+           <div class="card-columns col-12  carousel-item  bg-header rounded " style="border: 1px solid red;">
+      {%for anuncio in fotos %}
+     <!--Anuncio 1 -->
+      <div class="card col-12   mb-2   " style="border: 1px solid red;">
+      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+            <div>
+
+              <div >Valor:{{anuncio.valor}}</div>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
+            </div>
+      </div>
+      <!--Fim Colunas -->
+
+
+    {% endfor %}
+    </div>
+
+           <div class="card-columns col-12  carousel-item  bg-header rounded " style="border: 1px solid red;">
+      {%for anuncio in fotos %}
+     <!--Anuncio 1 -->
+      <div class="card col-12   mb-2   " style="border: 1px solid red;">
+      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+            <div>
+
+              <div >Valor:{{anuncio.valor}}</div>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
+            </div>
+      </div>
+      <!--Fim Colunas -->
+
+
+    {% endfor %}
+    </div>
+
+           <div class="card-columns col-12  carousel-item  bg-header rounded " style="border: 1px solid red;">
+      {%for anuncio in fotos %}
+     <!--Anuncio 1 -->
+      <div class="card col-12   mb-2   " style="border: 1px solid red;">
+      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+            <div>
+
+              <div >Valor:{{anuncio.valor}}</div>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
+            </div>
+      </div>
+      <!--Fim Colunas -->
+
+
+    {% endfor %}
+    </div>
+
+    <a class="carousel-control-prev bg-light col-1" href="#carouselExample" role="button" data-slide="prev">
+            <i class="fa fa-chevron-left fa-lg text-muted bg-dark"></i>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next text-faded bg-light col-1 " href="#carouselExample" role="button" data-slide="next">
+            <i class="fa fa-chevron-right fa-lg text-muted bg-dark"></i>
+            <span class="sr-only">Next</span>
+        </a>
+
+        </div>
+
+    </div>
+</div>
+<!--final Carrousel principal -->
 
 
 
@@ -818,7 +806,7 @@
 
       {% endblock%}
 
-   <footer class="text-center bg-warning pb-3 d-block d-md-none  " style="font-size: 1em">
+   <footer class="text-center bg-header pb-3 d-block d-md-none  " style="font-size: 1em">
     <div  class="pt-2 px-3"> Desenvolvido por Antherus Desenvolvimento Web</div>
 
     <div style="font-size: 0.8em;">www.antherus.com.br</div>
@@ -827,7 +815,7 @@
           <!-- Link Instagram -->
           <i class="fab fa-instagram   display-5 ml-3  "  id="insta" aria-hidden="true"></i><span class=" m-1">@antherus</span>
 
-          
+
           </span>
 
           <span  class="col-1 aling-self-center "  >
@@ -836,12 +824,12 @@
           </span>
   </footer>
 
-	
 
 
 
 
-     
+
+
 
    <script type="text/javascript">
       $('#carouselExample').on('slide.bs.carousel', function (e) {
@@ -850,17 +838,17 @@
 
     CC 2.0 License Iatek LLC 2018
     Attribution required
-    
+
     */
 
     var $e = $(e.relatedTarget);
-    
+
     var idx = $e.index();
     console.log("IDX :  " + idx);
-    
+
     var itemsPerSlide = 8;
     var totalItems = $('.carousel-item').length;
-    
+
     if (idx >= totalItems-(itemsPerSlide-1)) {
         var it = itemsPerSlide - (totalItems - idx);
         for (var i=0; i<it; i++) {

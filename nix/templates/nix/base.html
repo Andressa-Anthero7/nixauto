@@ -49,7 +49,7 @@
     padding: 8px;
     margin-bottom: 20px;
     text-align: center;
-    border-bottom-right-radius: 100px;
+    border-bottom-right-radius: 10px;
 
   }
 
@@ -311,23 +311,27 @@
 
   </head>
 
-  <body class="w-auto" >
-    <div class="container-fluid clearfix" >
-      <div class="row" >
-      <nav class="navbar navbar-expand-md navbar-dark  bg-header col-12 mt-0 " >
-        <!--Logo -->
-        <div class="navbar-brand ml-2 mt-0"><div id="logo">
-        <h1 id="branco">Auto<span style="color: black;  ">Nix</span></h1>
-        <h3 style="color: black;">Classifi<span id="branco">cados</span></h3>
+  <body class="w-auto mt-0" >
+    <div class="container-fluid mb-0 mt-0 " >
+      <div class="row bg-header mt-0 mb-0" >
+      <nav class="navbar navbar-expand-md navbar-dark   col-12
+       mt-0    " >
+
+       <div class=" navbar-brand col-6 m-0 ml-0 p-0 mt-0">
+        <div class="m-0 p-0" id="logo">
+        <h1 class="m-0 p-0" id="branco">Auto<span style="color: black;  ">Nix</span></h1>
+        <h3 class="m-0 p-0" style="color: black;">Classifi<span id="branco">cados</span></h3>
         </div>
-        </div>
+      </div>
+
+      <div class=" mt-5 ml-5 mb-4" style="float: right;" >
         <!--Menu Hamburguer -->
-        <button class="navbar-toggler m-5 bg-warning" data-toggle="collapse" data-target="#navegacao2">
+        <button class="navbar-toggler  bg-warning" data-toggle="collapse" data-target="#navegacao2">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <!--Navegação -->
-        <div class="collapse navbar-collapse  ml-5" id="navegacao2">
+        <div class="collapse navbar-collapse m-0 " id="navegacao2">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item ">
                     <a href="" class="nav-link btn btn-warning mr-5 text-dark">Home</a>
@@ -340,115 +344,35 @@
                 <li class="nav-item">
                     <a href="" class="nav-link btn btn-warning mr-5 text-dark">Fale Conosco</a>
                 </li>
-            </ul>
-            
+            </ul> 
         </div>
+      </div>
+
+
+
+        
+
+
     </nav>
-      <!-- Links Redes Sociais -->
-          <div  class="m-auto p-auto"  >
-          <!-- Link Instagram -->
-          <i class="fab fa-instagram   display-5 m-0 p-0  "  id="insta" ></i><span class="text-dark m-0 p-0" style="font-size:1em;">@nixauto</span>
-          <span class="mx-5"></span>
-          <!-- Link Facebook -->
-          <i class="fab fa-facebook-square display-5  m-0 p-0 " style="color: #3b5998; ">/nixauto</i>
-          </div>
-    </div>
+
+     <!-- Formulário inline -->
+      <div class=" col-12 d-block mb-0 p-0  " >
+         <form method="GET" class="mb-0" >
+        <input type="text"  class="form-control d-inline col-9   " placeholder="Pesquisar por TITULO MARCA MODELO ANO OU ANUNCIANTE" name="search" id="search">
+        <div class="input-group-prepend d-inline mr-4 col-2  "  style="float: right;">
+          <button class="btn btn-outline-light bg-warning " type="submit" id="button-addon1">Buscar</button>
+        </div>
+      </form>
+      </div>
+
+     
+     
 
 
-    <!-- Inicio Coluna Busca -->   
-     <nav class=" navbar navbar-expand-lg bg-warning rounded  row justify-content-around mt-3 style="border:1px solid red;">
-
-
-
-
-        <!--Opçoes de veiculos-->
-        <select class=""  id="caixa-selecao"name="veiculo" id="veiculo" onchange="AbrirSecao(this.value)">
-          <option value="*" selected>Veiculos</option>
-          <option value="carro.html">Carro</option>
-          <option>Moto</option>
-          <option>Caminhão</option>
-          <option>Nautica</option>
-        </select>
-
-        <!--Marca-->
-        <select id="caixa-selecao">
-          <option value="*" selected>Marca</option>
-          <option>AUDI</option>
-          <option>BMW</option>
-          <option>CAOA CHERY</option>
-          <option>CHEVROLET</option>
-          <option>CRYSLER</option>
-          <option>CITRÖEN</option>
-          <option>DODGE</option>
-          <option>FIAT</option>
-          <option>FORD</option>
-          <option>HONDA</option>
-          <option>HYUNDAI</option>
-          <option>JAC</option>
-          <option>JAGUAR</option>
-          <option>JEEP</option>
-          <option>KIA</option>
-          <option>LAND ROVER</option>
-          <option>MERCEDE-BENZ</option>
-          <option>MITSUBISHI</option>
-          <option>NISSAN</option>
-          <option>PEGEOUT</option>
-          <option>AUDI</option>
-          <option>RENAULT</option>
-          <option>SUZUKI</option>
-          <option>TOYOTA</option>
-          <option>TROLLER</option>
-          <option>VOLKSWAGEM</option>
-          <option>VOLVO</option>
-          <option>YAMAHA</option>
-        </select>
-        <!--Ano-->
-        <select id="caixa-selecao">
-          <option value="*" selected>Ano</option>
-          <option>2021</option>
-          <option>2020</option>
-          <option>2019</option>
-          <option>2018</option>
-          <option>2017</option>
-          <option>2016</option>
-          <option>2015</option>
-          <option>2014</option>
-          <option>2013</option>
-          <option>2012</option>
-          <option>2011</option>
-          <option>2010</option>
-          <option>2009</option>
-          <option>2008</option>
-          <option>2007</option>
-          <option>2006</option>
-          <option>2005</option>
-          <option>2004</option>
-          <option>2003</option>
-          <option>2002</option>
-          <option>2001</option>
-          <option>2000</option>
-          <option>1999</option>
-        </select>
-
-        <!--Modelo-->
-        <select id="caixa-selecao">
-          <option value="*" selected>Modelo</option>
-          <option value="carro">Carro</option>
-          <option>Moto</option>
-          <option>Caminhão</option>
-          <option>Nautica</option>
-        </select>
-        <!--Cor-->
-        <select id="caixa-selecao">
-          <option value="*" selected>Cor</option>
-          <option>Carro</option>
-          <option>Moto</option>
-          <option>Caminhão</option>
-          <option>Nautica</option>
-        </select>
-      </nav>
     
-     <!--Fim Coluna busca -->  
+      
+    </div>
+         
 
     
         <!--Conteudo -->
