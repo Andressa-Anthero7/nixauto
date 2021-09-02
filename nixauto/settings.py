@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-5vg%tbncbqpw91b0(@-#a27)vq)l_1%9&_8+wd0x&01b@b%mch
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['devnixauto.pythonanywhere.com']
+ALLOWED_HOSTS = ['devnixauto.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'nix',
+    'anunciante',
+    'crispy_forms',
+    
 
 ]
 
@@ -56,7 +59,7 @@ ROOT_URLCONF = 'nixauto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+       'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,3 +132,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Redirect to home URL after login (Default redirects to /accounts/profile/)
+LOGIN_REDIRECT_URL = '/anunciante'
+

@@ -22,9 +22,10 @@ urlpatterns = [
     path('', include('nix.urls')),
     path('anunciar',include('nix.urls')),
     path('imagens',include('nix.urls')),
-    path('display',include('nix.urls')),
+    path('anunciante',include('nix.urls')),
     path('cadastro',include('nix.urls')),
-
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('anunciante', include('anunciante.urls')),
 
 ]
 

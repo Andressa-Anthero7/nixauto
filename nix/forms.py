@@ -9,3 +9,4 @@ class CriarAnuncioForms(forms.Form):
     valor = forms.CharField(label="Valor", max_length=30)
     contato = forms.CharField(label="Contato", max_length=30)
     anunciante = forms.CharField(label="Anunciante", max_length=30)
+    

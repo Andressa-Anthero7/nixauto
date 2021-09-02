@@ -314,28 +314,6 @@
   <body class="w-auto mt-0" >
     <div class="container-fluid mb-0 mt-0 " >
       <div class="row bg-header mt-0 mb-0" >
-
-        <div class=" col-12 float-right bg-warning rounded my-2 py-1">
-            <span class=""></span>
-             <span class="  ">
-
-              <div class="sidebar-nav row  ">
-           {% if user.is_authenticated %}
-             <span class=" col-3     ">Olá,(a): {{ user.get_username }}</span>
-             <span class=" col-5  ">Acesse Aqui sua <a  class="btn btn-sm btn-primary p-02 ml-2 text-dark" href="{% url 'logout'%}?next={{request.path}}">Àrea do anunciante</a></span>
-             <span class=" col-4 ">Para sair Use:<a class="btn btn-sm btn-danger p-02 text-dark ml-2" href="{% url 'logout'%}?next={{request.path}}">Logout</a></span>
-
-           {% else %}
-             <span class="mx-auto my-2">Para acessar Área de Anunciante faça o  <a class="btn btn-sm btn-primary p-02 ml-2  text-dark" href="{% url 'login'%}?next={{request.path}}">Login</a></span>
-             <span class="mx-auto my-2">Ainda Não é Anunciante   <a class="btn btn-sm btn-primary p-02 ml-2  text-dark" href="{% url 'login'%}?next={{request.path}}">Torna-se Anunciante</a></span>
-
-           {% endif %} 
-          </div>
-
-        </span>
-
-          </div>
-
       <nav class="navbar navbar-expand-md navbar-dark   col-12
        mt-0    " >
 
@@ -377,15 +355,7 @@
 
     </nav>
 
-     <!-- Formulário inline -->
-      <div class=" col-12 d-block mb-0 p-0  " >
-         <form method="GET" class="mb-0" >
-        <input type="text"  class="form-control d-inline col-9   " placeholder="Pesquisar por TITULO MARCA MODELO ANO OU ANUNCIANTE" name="search" id="search">
-        <div class="input-group-prepend d-inline mr-4 col-2  "  style="float: right;">
-          <button class="btn btn-outline-light bg-warning text-dark " type="submit" id="button-addon1">Buscar</button>
-        </div>
-      </form>
-      </div>
+    
 
      
      

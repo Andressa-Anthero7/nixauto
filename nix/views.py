@@ -57,11 +57,12 @@ def anunciar(request):
 def cadastro(request):
     return render(request, 'nix/cadastro.html')
 
-def display (request):
+def anunciante (request):
     posts = Anuncio.objects.all()
-    return  render(request, 'nix/display.html',{'posts': posts})
+    return  render(request, 'nix/area-anunciante.html',{'posts': posts})
 
 def imagens (request):
     imagem = Anuncio.objects.all()
     return render(request,{'imagens': imagem})
+
 

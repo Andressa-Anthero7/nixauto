@@ -2,7 +2,7 @@
 <html lang="pt-br">
   <head>
 
-    <meta http-equiv="refresh" content="60;URL=http://devnixauto.pythonanywhere.com/" />
+    <meta http-equiv="refresh" content="600;URL=http://devnixauto.pythonanywhere.com/" />
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -397,9 +397,34 @@
 
   <body class="w-auto mt-0" >
     <div class="container-fluid mb-0 mt-0 " >
+     
       <div class="row bg-header mt-0 mb-5" >
+
+
+         <div class=" col-12 float-right bg-warning rounded">
+            <span class=""></span>
+             <span class="  ">
+
+              <div class="sidebar-nav row  ">
+           {% if user.is_authenticated %}
+             <span class=" col-3     ">Olá,(a): {{ user.get_username }}</span>
+             <span class=" col-5  ">Acesse Aqui sua <a  class="btn btn-sm btn-primary p-02 ml-2 text-dark" href="{% url 'logout'%}?next={{request.path}}">Àrea do anunciante</a></span>
+             <span class=" col-4 ">Faça aqui seu aqui seu<a class="btn btn-sm btn-danger p-02 text-dark ml-2" href="{% url 'logout'%}?next={{request.path}}">Logout</a></span>
+
+           {% else %}
+             <span class="mx-3 my-2">Para sair use  <a class="btn btn-sm btn-primary p-02 ml-2  text-dark" href="{% url 'login'%}?next={{request.path}}">Login</a></span>
+
+           {% endif %} 
+          </div>
+
+        </span>
+
+          </div>
+
       <nav class="navbar navbar-expand-md navbar-dark   col-12
-       mt-0 mb-5    " >
+       mt-0 mb-5" >
+
+
 
        <div class=" navbar-brand col-6 m-0 ml-0 p-0 mt-0">
         <div class="m-0 p-0" id="logo">
@@ -407,6 +432,8 @@
         <h3 class="m-0 p-0" style="color: black;">Classifi<span id="branco">cados</span></h3>
         </div>
       </div>
+
+
 
       <div class=" mt-5 ml-5 mb-4" style="float: right;" >
         <!--Menu Hamburguer -->
@@ -431,6 +458,8 @@
             </ul>
         </div>
       </div>
+
+
 
     </nav>
 
