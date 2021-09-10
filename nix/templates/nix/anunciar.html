@@ -36,13 +36,14 @@
 
 		<div style=" width: 50%; margin-left: 300px; border: 1px solid red">
 			<h4 style="line-height:50px">Cadastro de Anúncio</h4>
-			<form  action = "" method = "POST">
+			<form enctype="multipart/form-data" action = "" method = "POST">
 				{% csrf_token %}
 				<ul style=" list-style: none;  margin: 30px;">
 					{{ form.as_ul }}
 				</ul>
 				<input style="float: right" type="submit" value="Anunciar">
 			</form>
+			
 		</div>	
 	</div>
 
