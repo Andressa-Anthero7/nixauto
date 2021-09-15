@@ -1,41 +1,107 @@
+{% extends 'nix/base.html' %}
 
-<!DOCTYPE html>
-<html>
-<head>
+{% block content %}
+    <div class=" row  bg-light rounded mt-4 mx-auto p-3  " style="border: 1px solid red;">
+
+      <!--<img class="img col-12 d-md-none" src="{{post.imagem1.url}}">-->
+     <!-- <img class="img  img-fluid d-none d-md-inline col-4 " src="{{post.imagem1.url}}"> -->
+     <div id="carouselExampleControls" class="carousel slide col-5 " data-ride="carousel" style="border:1px solid gray;">
+  <div class="carousel-inner ">
+    <div class="carousel-item active ">
+      <img class="img img-fluid d-block  col-12  " src="{{post.imagem1.url}}" alt="Primeiro Slide" >
+    </div>
+    <div class="carousel-item">
+      <img class="img img-fluid d-block col-12 " src="{{post.imagem2.url}}" alt="Segundo Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="img img-fluid d-block col-12 " src="{{post.imagem3.url}}" alt="Terceiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="img img-fluid d-block col-12 " src="{{post.imagem4.url}}" alt="Terceiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="img img-fluid d-block col-12  " src="{{post.imagem5.url}}" alt="Terceiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="img img-fluid d-block col-12 " src="{{post.imagem6.url}}" alt="Terceiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="img img-fluid d-block col-12  " src="{{post.imagem7.url}}" alt="Terceiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="img img-fluid d-block col-12  " src="{{post.imagem8.url}}" alt="Terceiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="img img-fluid d-block col-12 " src="{{post.imagem9.url}}" alt="Terceiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="img img-fluid d-block col-12" src="{{post.imagem10.url}}" alt="Terceiro Slide">
+    </div>
+
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Próximo</span>
+  </a>
+</div>
 
 
-    <title>Nix Auto --Anunciar </title>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="static/css/estilo.css">
+      <table class="d-inline float-right col-5" >
+        <tr  >
+          <td>Ano:</td>
+          <td>{{post.ano_modelo}}</td>
+        </tr>
 
-</head>
-<body>
-	<!-- Container Principal-->
-	<div id="main">
-		<!--Header-->
-		<div id="header">
-			<!--Menu-->
-			<div id="logo">
-				<h1>Auto<span id="branco">Nix</span></h1>
-				<h5>Classi<span id="branco">ficados</span></h5>
-			</div>
-			<!--Menu-->
-			<!-- Area do Menu-->
-			<div id="menu">
-				<a href="index.html">Home</a>
-				<a href="carro.html">Carros</a>
-				<a href="motos.html">Motos</a>
-				<a href="anunciar.html">Como Anunciar seus veiculos</a>
-				<a href="contato.html">Contatos</a>
-			</div>
-			<!-- Final da area de Menu-->
-		</div>
-		<!--fim Header-->
-		
-	</div>
+        <tr>
+          <td>Marca:</td>
+          <td>{{post.marca}}</td>
+        </tr>
+
+        
+
+        <tr>
+          <td>Modelo</td>
+          <td>{{post.modelo}}</td>
+        </tr>
+
+        
+
+        <tr>
+          <td>Cor:</td>
+          <td>{{post.cor}}</td>
+        </tr>
+
+        <tr>
+          <td>Km:</td>
+          <td>{{post.km}}</td>
+        </tr>
+
+        <tr>
+          <td>Anunciante:</td>
+          <td>{{post.anunciante}}</td>
+        </tr>
 
 
+        <tr>
+          <td>Valor:</td>
+          <td>{{post.valor}}</td>
+        </tr>
+      </table>
 
-</body>
-</html>
+
+     
+
+      
+      
+
+
+      
+
+     <div class="clearfix"></div>
+       
+     </div>
+{% endblock %}

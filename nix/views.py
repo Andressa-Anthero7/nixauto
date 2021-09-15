@@ -1,4 +1,4 @@
-
+from django.shortcuts import render, get_object_or_404
 from django.shortcuts import HttpResponseRedirect, render, redirect
 from nix.forms import CriarAnuncioForm
 from .models import Anuncio
@@ -22,7 +22,7 @@ def index(request):
     busca = request.GET.get('search')
     if busca:
         posts = Anuncio.objects.filter(
-            Q(titulo__icontains=busca)|Q(modelo__icontains=busca)|Q(marca__icontains=busca)|Q(ano__icontains=busca)|Q(valor__icontains=busca)|Q(anunciante__icontains=busca)
+            Q(modelo__icontains=busca)|Q(marca__icontains=busca)|Q(ano_fabricacao__icontains=busca)|Q(ano_modelo__icontains=busca)|Q(combustivel__icontains=busca)|Q(cambio__icontains=busca)|Q(cor__icontains=busca)|Q(portas__icontains=busca)|Q(valor__icontains=busca)|Q(anunciante__icontains=busca)
         )
     return render(request, 'nix/index.html',{'posts': posts, 'fotos':carousel, 'carousel_mobile1':carousel_mobile1, 'carousel_mobile2':carousel_mobile2, 'carousel_mobile3':carousel_mobile3, 'carousel_mobile4':carousel_mobile4, 'carousel_mobile5':carousel_mobile5, 'carousel_mobile6':carousel_mobile6}  )
 
@@ -33,12 +33,11 @@ def anunciar(request):
         form = CriarAnuncioForm(request.POST, request.FILES)
         # check whether it's valid:
         if form.is_valid():
-            form.save()
-
-        
-            
+            anuncio = form.save( commit=False )
+            anuncio.anunciante = request.user
+            anuncio.save()
             # redirect to a new URL:
-            return  redirect('/anunciante')
+            return  redirect('anuncio', pk=anuncio.pk)
 
         # if a GET (or any other method) we'll create a blank form
     else:
@@ -46,15 +45,14 @@ def anunciar(request):
     return render(request, 'nix/anunciar.html', {'form': form})
 
 
-def cadastro(request):
-    return render(request, 'nix/cadastro.html')
+def anuncio(request,pk):
+    post = get_object_or_404(Anuncio, pk=pk)
+    return render(request,'nix/anuncio.html',{'post':post})
 
 def anunciante (request):
     posts = Anuncio.objects.all()
     return  render(request, 'nix/area-anunciante.html',{'posts': posts})
 
-def imagens (request):
-    imagem = Anuncio.objects.all()
-    return render(request,{'imagens': imagem})
+
 
 

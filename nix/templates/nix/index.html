@@ -485,12 +485,12 @@
 
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2   " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}" style=" width:100%; height:100%;">
+      <h4 class="card-title m-0  text-center">{{anuncio.marca}}   {{anuncio.modelo}} {{anuncio.ano}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem1.url}}" style=" width:100%; height:100%;">
             <div>
 
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 col-md-12  "  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm  m-0 col-md-12  "  href="{% url 'anuncio' pk=anuncio.pk %}">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
             </div>
       </div>
@@ -522,12 +522,12 @@
       {%for anuncio in carousel_mobile1 %}
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2 mx-auto  " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+      <h4 class="card-title m-0  text-center">{{anuncio.marca}}   {{anuncio.modelo}} {{anuncio.ano}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem1.url}}">
             <div>
 
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="{% url 'anuncio' pk=anuncio.pk %}">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}1</div>
             </div>
       </div>
@@ -544,12 +544,12 @@
       {%for anuncio in carousel_mobile2 %}
      <!--Anuncio 1 -->
       <div class="card col-12  mb-2 mx-auto  " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+      <h4 class="card-title m-0  text-center">{{anuncio.marca}}   {{anuncio.modelo}} {{anuncio.ano}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem1.url}}">
             <div>
 
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="{% url 'anuncio' pk=anuncio.pk %}">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
             </div>
       </div>
@@ -564,12 +564,12 @@
       {%for anuncio in carousel_mobile3 %}
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2 mx-auto  " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+      <h4 class="card-title m-0  text-center">{{anuncio.marca}}   {{anuncio.modelo}} {{anuncio.ano}}/h4>
+      <img class="card-img-top  " src="{{anuncio.imagem1.url}}">
             <div>
 
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="{% url 'anuncio' pk=anuncio.pk %}">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}3</div>
             </div>
       </div>
@@ -584,12 +584,12 @@
       {%for anuncio in carousel_mobile4 %}
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2 mx-auto  " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+      <h4 class="card-title m-0  text-center">{{anuncio.marca}}   {{anuncio.modelo}} {{anuncio.ano}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem1.url}}">
             <div>
 
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="{% url 'anuncio' pk=anuncio.pk %}">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}3</div>
             </div>
       </div>
@@ -604,12 +604,12 @@
       {%for anuncio in carousel_mobile5 %}
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2 mx-auto  " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+      <h4 class="card-title m-0  text-center">{{anuncio.marca}}   {{anuncio.modelo}} {{anuncio.ano}}/h4>
+      <img class="card-img-top  " src="{{anuncio.imagem1.url}}">
             <div>
 
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="{% url 'anuncio' pk=anuncio.pk %}">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}3</div>
             </div>
       </div>
@@ -624,12 +624,12 @@
       {%for anuncio in carousel_mobile6 %}
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2 mx-auto  " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+      <h4 class="card-title m-0  text-center">{{anuncio.marca}}   {{anuncio.modelo}} {{anuncio.ano}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem1.url}}">
             <div>
 
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="{% url 'anuncio' pk=anuncio.pk %}">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}3</div>
             </div>
       </div>
@@ -664,12 +664,12 @@
       {%for anuncio in fotos %}
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2   " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+      <h4 class="card-title m-0  text-center">{{anuncio.marca}}   {{anuncio.modelo}} {{anuncio.ano}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem1.url}}">
             <div>
 
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0  "  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm  m-0  "  href="{% url 'anuncio' pk=anuncio.pk %}">Detalhes do Veículos</a>
               <div class="m-0  " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
             </div>
       </div>
@@ -683,12 +683,12 @@
       {%for anuncio in fotos %}
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2   " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+      <h4 class="card-title m-0  text-center">{{anuncio.marca}}   {{anuncio.modelo}} {{anuncio.ano}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem1.url}}">
             <div>
 
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="{% url 'anuncio' pk=anuncio.pk %}">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
             </div>
       </div>
@@ -702,12 +702,12 @@
       {%for anuncio in fotos %}
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2   " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+      <h4 class="card-title m-0  text-center">{{anuncio.marca}}   {{anuncio.modelo}} {{anuncio.ano}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem1.url}}">
             <div>
 
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="{% url 'anuncio' pk=anuncio.pk %}">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
             </div>
       </div>
@@ -721,12 +721,12 @@
       {%for anuncio in fotos %}
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2   " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+      <h4 class="card-title m-0  text-center">{{anuncio.marca}}   {{anuncio.modelo}} {{anuncio.ano}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem1.url}}">
             <div>
 
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="{% url 'anuncio' pk=anuncio.pk %}">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
             </div>
       </div>
@@ -740,12 +740,12 @@
       {%for anuncio in fotos %}
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2   " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+      <h4 class="card-title m-0  text-center">{{anuncio.marca}}   {{anuncio.modelo}} {{anuncio.ano}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem1.url}}">
             <div>
 
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="{% url 'anuncio' pk=anuncio.pk %}">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
             </div>
       </div>
@@ -759,12 +759,12 @@
       {%for anuncio in fotos %}
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2   " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+      <h4 class="card-title m-0  text-center">{{anuncio.marca}}   {{anuncio.modelo}} {{anuncio.ano}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem1.url}}">
             <div>
 
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="{% url 'anuncio' pk=anuncio.pk %}">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
             </div>
       </div>
@@ -778,12 +778,12 @@
       {%for anuncio in fotos %}
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2   " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+      <h4 class="card-title m-0  text-center">{{anuncio.marca}}   {{anuncio.modelo}} {{anuncio.ano}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem1.url}}">
             <div>
 
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="{% url 'anuncio' pk=anuncio.pk %}">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
             </div>
       </div>
@@ -797,12 +797,12 @@
       {%for anuncio in fotos %}
      <!--Anuncio 1 -->
       <div class="card col-12   mb-2   " style="border: 1px solid red;">
-      <h4 class="card-title m-0  text-center">{{anuncio}}</h4>
-      <img class="card-img-top  " src="{{anuncio.imagem.url}}">
+      <h4 class="card-title m-0  text-center">{{anuncio.marca}}   {{anuncio.modelo}} {{anuncio.ano}}</h4>
+      <img class="card-img-top  " src="{{anuncio.imagem1.url}}">
             <div>
 
               <div >Valor:{{anuncio.valor}}</div>
-              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="">Detalhes do Veículos</a>
+              <a  class="btn btn-outline-primary btn-sm  m-0 "  href="{% url 'anuncio' pk=anuncio.pk %}">Detalhes do Veículos</a>
               <div class="m-0 " style="font-size: 0.5em;">Anunciado por:{{ anuncio.anunciante }}</div>
             </div>
       </div>

@@ -21,9 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('nix.urls')),
     path('anunciar',include('nix.urls')),
-    path('imagens',include('nix.urls')),
+    path('anuncio/<int:pk>/',include('nix.urls')),
     path('anunciante',include('nix.urls')),
-    path('cadastro',include('nix.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('anunciante', include('anunciante.urls')),
 
