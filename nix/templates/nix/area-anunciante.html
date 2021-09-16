@@ -454,7 +454,7 @@
       </form>
       </div>
       <div class=" d-inline ml-4  col-2 my-0 "  >
-          <button class="btn btn-outline-light mt-4 bg-primary " type="submit" id="button-addon1">Novo Anúncio</button>
+          <span><a class="btn btn-primary mx-2 " href="{% url 'anunciar'%}">Novo Anúncio</a></span>
         </div>
 
       <div>
@@ -517,7 +517,7 @@
 
       <div class="mt-3">
       <span><a class="btn btn-primary mx-2 " href="{% url 'anuncio_editar' pk=anuncio.pk %}">Editar</a></span>
-      <span><a class="btn btn-primary mx-2" href="">Excluir</a><span>
+      <span><a class="btn btn-primary mx-2" href="{% url 'anuncio_deletar' pk=anuncio.pk %}">Excluir</a><span>
       <span><a class="btn btn-primary mx-2" href="">Ver no Site</a><span>
      </div>
         

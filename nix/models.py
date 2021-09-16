@@ -1,6 +1,7 @@
 from django.db import models
 from django_resized import ResizedImageField
 from sorl.thumbnail import ImageField, get_thumbnail
+from django.conf import settings
 
 
 # Create your models here.
@@ -234,7 +235,7 @@ class Anuncio(models.Model):
     portas = models.CharField(max_length=1, choices=PORTAS, null=True, blank=False)
     valor = models.CharField(max_length=9, null=False, blank=False,help_text='no formato 1.000,00')
     contato = models.CharField(max_length=20, null=False, blank=False,help_text='         Número de WhatsApp')
-    anunciante = models.CharField(null=False, max_length=20, blank=False,help_text='Nome')
+    anunciante = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     acessórios_opcionais = models.TextField(max_length=150 , null=True, blank=False,help_text='digite acessários opcionais tais como Alarme, KitMultimída, Som e Rodas.')
     imagem1 = ResizedImageField(size=[660, 540], quality=100, upload_to='media/',force_format='PNG', null=False,blank=False)
     imagem2 = ResizedImageField(size=[660, 540], quality=100, upload_to='media/',force_format='PNG', null=False,blank=False)
