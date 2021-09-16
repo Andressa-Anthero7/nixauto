@@ -5,37 +5,84 @@
 
       <!--<img class="img col-12 d-md-none" src="{{post.imagem1.url}}">-->
      <!-- <img class="img  img-fluid d-none d-md-inline col-4 " src="{{post.imagem1.url}}"> -->
-     <div id="carouselExampleControls" class="carousel slide col-5 " data-ride="carousel" style="border:1px solid gray;">
+     <div id="carouselExampleControls" class="carousel slide col-6 d-none d-md-block" data-ride="carousel" style="border:1px solid gray;">
   <div class="carousel-inner ">
     <div class="carousel-item active ">
-      <img class="img img-fluid d-block  col-12  " src="{{post.imagem1.url}}" alt="Primeiro Slide" >
+      <img class="img  d-block  col-12  " src="{{post.imagem1.url}}" alt="Primeiro Slide" >
+
     </div>
     <div class="carousel-item">
-      <img class="img img-fluid d-block col-12 " src="{{post.imagem2.url}}" alt="Segundo Slide">
+      <img class="img  d-block col-12 " src="{{post.imagem2.url}}" alt="Segundo Slide">
     </div>
     <div class="carousel-item">
-      <img class="img img-fluid d-block col-12 " src="{{post.imagem3.url}}" alt="Terceiro Slide">
+      <img class="img  d-block col-12 " src="{{post.imagem3.url}}" alt="Terceiro Slide">
     </div>
     <div class="carousel-item">
-      <img class="img img-fluid d-block col-12 " src="{{post.imagem4.url}}" alt="Terceiro Slide">
+      <img class="img  d-block col-12 " src="{{post.imagem4.url}}" alt="Terceiro Slide">
     </div>
     <div class="carousel-item">
-      <img class="img img-fluid d-block col-12  " src="{{post.imagem5.url}}" alt="Terceiro Slide">
+      <img class="img  d-block col-12  " src="{{post.imagem5.url}}" alt="Terceiro Slide">
     </div>
     <div class="carousel-item">
-      <img class="img img-fluid d-block col-12 " src="{{post.imagem6.url}}" alt="Terceiro Slide">
+      <img class="img  d-block col-12 " src="{{post.imagem6.url}}" alt="Terceiro Slide">
     </div>
     <div class="carousel-item">
-      <img class="img img-fluid d-block col-12  " src="{{post.imagem7.url}}" alt="Terceiro Slide">
+      <img class="img  d-block col-12  " src="{{post.imagem7.url}}" alt="Terceiro Slide">
     </div>
     <div class="carousel-item">
-      <img class="img img-fluid d-block col-12  " src="{{post.imagem8.url}}" alt="Terceiro Slide">
+      <img class="img d-block col-12  " src="{{post.imagem8.url}}" alt="Terceiro Slide">
     </div>
     <div class="carousel-item">
-      <img class="img img-fluid d-block col-12 " src="{{post.imagem9.url}}" alt="Terceiro Slide">
+      <img class="img  d-block col-12 " src="{{post.imagem9.url}}" alt="Terceiro Slide">
     </div>
     <div class="carousel-item">
-      <img class="img img-fluid d-block col-12" src="{{post.imagem10.url}}" alt="Terceiro Slide">
+      <img class="img  d-block col-12" src="{{post.imagem10.url}}" alt="Terceiro Slide">
+    </div>
+
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Próximo</span>
+  </a>
+</div>
+
+<!--Responsivo para xs -->
+<div id="carouselExampleControls" class="carousel slide col-12 d-block d-md-none" data-ride="carousel" style="border:1px solid gray;">
+  <div class="carousel-inner ">
+    <div class="carousel-item active ">
+      <img class="img  d-block  col-12  " src="{{post.imagem1.url}}" alt="Primeiro Slide" >
+
+    </div>
+    <div class="carousel-item">
+      <img class="img  d-block col-12 " src="{{post.imagem2.url}}" alt="Segundo Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="img  d-block col-12 " src="{{post.imagem3.url}}" alt="Terceiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="img  d-block col-12 " src="{{post.imagem4.url}}" alt="Terceiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="img  d-block col-12  " src="{{post.imagem5.url}}" alt="Terceiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="img  d-block col-12 " src="{{post.imagem6.url}}" alt="Terceiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="img  d-block col-12  " src="{{post.imagem7.url}}" alt="Terceiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="img d-block col-12  " src="{{post.imagem8.url}}" alt="Terceiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="img  d-block col-12 " src="{{post.imagem9.url}}" alt="Terceiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="img  d-block col-12" src="{{post.imagem10.url}}" alt="Terceiro Slide">
     </div>
 
   </div>
@@ -50,7 +97,9 @@
 </div>
 
 
-      <table class="d-inline float-right col-5" >
+
+
+      <table class="d-block float-right col-2 ml-3 " >
         <tr  >
           <td>Ano:</td>
           <td>{{post.ano_modelo}}</td>
@@ -93,15 +142,10 @@
       </table>
 
 
-     
+      <div class="ml-5 pl-5 mt-4 d-none d-sm-block ">	
+      	<span class="p-1 ml-2"><a class="btn btn-primary  " href="">Whats App</a></span>
+        <span class="p-1 ml-2"><a class="btn btn-primary " href="">Facebook</a><span>
+      </div>
 
-      
-      
-
-
-      
-
-     <div class="clearfix"></div>
-       
      </div>
 {% endblock %}

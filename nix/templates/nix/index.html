@@ -408,7 +408,7 @@
               <div class="sidebar-nav row  ">
            {% if user.is_authenticated %}
              <span class=" col-3     ">Olá,(a): {{ user.get_username }}</span>
-             <span class=" col-5  ">Acesse Aqui sua <a  class="btn btn-sm btn-primary p-02 ml-2 text-dark" href="{% url 'logout'%}?next={{request.path}}">Àrea do anunciante</a></span>
+             <span class=" col-5  ">Acesse Aqui sua <a  class="btn btn-sm btn-primary p-02 ml-2 text-dark" href="{% url 'anunciante'%}?next={{request.path}}">Àrea do anunciante</a></span>
              <span class=" col-4 ">Faça aqui seu aqui seu<a class="btn btn-sm btn-danger p-02 text-dark ml-2" href="{% url 'logout'%}?next={{request.path}}">Logout</a></span>
 
            {% else %}
