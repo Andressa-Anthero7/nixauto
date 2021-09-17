@@ -3,9 +3,10 @@
 {% block content %}
     <div class=" row  bg-light rounded mt-4 mx-auto p-3  " style="border: 1px solid red;">
 
+
       <!--<img class="img col-12 d-md-none" src="{{post.imagem1.url}}">-->
      <!-- <img class="img  img-fluid d-none d-md-inline col-4 " src="{{post.imagem1.url}}"> -->
-     <div id="carouselExampleControls" class="carousel slide col-6 d-none d-md-block" data-ride="carousel" style="border:1px solid gray;">
+     <div id="carouselExampleControls" class="carousel slide col-7 d-none d-md-block" data-ride="carousel" style="border:1px solid gray;">
   <div class="carousel-inner ">
     <div class="carousel-item active ">
       <img class="img  d-block  col-12  " src="{{post.imagem1.url}}" alt="Primeiro Slide" >
@@ -98,60 +99,81 @@
 
 
 
-
-      <table class="d-block float-right col-2 ml-3 " >
+      <div class="ml-5">
+        <div class="h3 text-center pl-5 pt-3">Anuncio Id Nix-{{post.pk}}</div>
+      <table class="d-block  col-6 mb-5 ml-5 mt-5" >
         <tr  >
-          <td>Ano:</td>
-          <td>{{post.ano_modelo}}</td>
+          <td >Ano:</td>
+          <td class="pl-5">{{post.ano_modelo}}</td>
         </tr>
 
         <tr>
           <td>Marca:</td>
-          <td>{{post.marca}}</td>
+          <td class="pl-5">{{post.marca}}</td>
         </tr>
 
         
 
         <tr>
           <td>Modelo</td>
-          <td>{{post.modelo}}</td>
+          <td class="pl-5">{{post.modelo}}</td>
         </tr>
 
         
 
         <tr>
           <td>Cor:</td>
-          <td>{{post.cor}}</td>
+          <td class="pl-5">{{post.cor}}</td>
         </tr>
 
         <tr>
           <td>Km:</td>
-          <td>{{post.km}}</td>
+          <td class="pl-5">{{post.km}}</td>
         </tr>
 
         <tr>
           <td>Anunciante:</td>
-          <td>{{post.anunciante}}</td>
+          <td class="pl-5">{{post.anunciante}}</td>
         </tr>
 
 
         <tr>
           <td>Valor:</td>
-          <td>{{post.valor}}</td>
+          <td class="pl-5">{{post.valor}}</td>
+        </tr>
+
+        <tr>
+          <td>Descrição:</td>
+          <td class="pl-5">{{post.acessórios_opcionais}}</td>
         </tr>
       </table>
+      <!-- Botoes padrao -->
+      <span class="ml-4 pl-4 mt-5 d-none d-sm-block ">  
+        <span class="p-1 ml-2"><a class="btn btn-success " href="https://api.whatsapp.com/send?phone=55{{post.contato}}&text=Olá, acabei de ver o veículo em seu site e gostaria de mais informações - {{post.marca}} {{post.modelo}} - R$ {{post.valor}}" target=_blank>Conversar via WhatsApp</a></span>
+        
+      </span>
+      <span class="ml-4 pl-4 mt-5 d-none d-sm-block ">
+        <span class="p-1 ml-2"><a class="btn btn-primary " href="">Compartilhar Facebook</a></span>
+      </span>
+    </div>
+
+      
 
 
-      <div class="ml-5 pl-5 mt-4 d-none d-sm-block ">	
-      	<span class="p-1 ml-2"><a class="btn btn-primary  " href="">Whats App</a></span>
-        <span class="p-1 ml-2"><a class="btn btn-primary " href="">Facebook</a><span>
+     
+
+
+
+<!-- Botoes xs -->
+       <div class="ml-5 pl-5 mt-4 d-block d-sm-none clearfix ">  
+        <span class="p-1 ml-2 float-right "><a class="btn btn-success " href="https://api.whatsapp.com/send?phone=55{{post.contato}}&text=Olá, acabei de ver o veículo em seu site e gostaria de mais informações -{{post.marca}}  {{post.modelo}} - R$ {{post.valor}}" target=_blank>Conversar via WhatsApp</a></span>
       </div>
 
-       <div class="ml-5 pl-5 mt-4 d-block d-sm-none ">  
-        <span class="p-1 ml-2"><a class="btn btn-primary  " href="">Whats App</a></span>
-        <span class="p-1 ml-2"><a class="btn btn-primary " href="">Facebook</a></span>
+      <div class="ml-5 pl-5 mt-4 d-block d-sm-none ">
+      <span class="p-1 ml-2 mt-3"><a class="btn btn-primary " href="">Compartilhar Facebook</a></span>
       </div>
-      <span class="p-1 ml-2"><a class="btn btn-success " href="{% url 'anunciante' %}">Voltar</a></span>
+
+      <span class="  mt-5 mb-0 col-12"><a class="btn btn-primary " href="{% url 'anunciante' %}">Voltar</a></span>
 
 
      </div>
