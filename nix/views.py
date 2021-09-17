@@ -70,10 +70,9 @@ def anuncio_editar(request,pk):
 def anuncio_deletar(request,pk):
     post =  get_object_or_404(Anuncio, pk=pk)
     post.delete()
-    return  redirect('anunciante')
+    return redirect('anunciante')
 
-    
-
+     
 def anunciante (request):
     posts = Anuncio.objects.all()
     return  render(request, 'nix/area-anunciante.html',{'posts': posts})
