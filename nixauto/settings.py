@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'nix',
     'anunciante',
     'crispy_forms',
+    'widget_tweaks',
     
 
 
