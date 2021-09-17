@@ -517,9 +517,9 @@
 
       <div class="mt-3">
       <span><a class="btn btn-primary mx-2 " href="{% url 'anuncio_editar' pk=anuncio.pk %}">Editar</a></span>
-      <span><a class="btn btn-primary mx-2" href="{% url 'anuncio_deletar' pk=anuncio.pk %}">Excluir</a><span>
-      <span><a class="btn btn-primary mx-2" href="">Ver no Site</a><span>
+      <span><a class="btn btn-primary mx-2" href="{% url 'anuncio' pk=anuncio.pk %}">Ver no Site</a><span>
      </div>
+     <div class="float-right col-12 my-2 mb-1"><a class="btn btn-danger col-12 " href="{% url 'anuncio_deletar' pk=anuncio.pk %}">Excluir</a></div>
         
            
 
