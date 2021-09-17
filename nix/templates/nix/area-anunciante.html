@@ -466,7 +466,7 @@
       <img class="img  img-fluid d-none d-md-inline col-4 " src="{{anuncio.imagem1.url}}">
 
 
-      <table class="d-inline float-right col-4 mt-3 " >
+      <table class="d-inline float-right col-5 mt-5 " >
         <tr >
           <td >Ano:</td>
           <td class="pl-5">{{anuncio.ano_fabricacao}}</td>
@@ -495,30 +495,20 @@
         </tr>
 
         <tr>
-          <td>Valor:</td>
-          <td class="pl-5">{{anuncio.valor}}</td>
-        </tr>
-
-        <tr>
-          <td>Valor:</td>
-          <td class="pl-5">{{anuncio.valor}}</td>
-        </tr>
-
-        <tr>
-          <td>Valor:</td>
-          <td class="pl-5">{{anuncio.valor}}</td>
-        </tr>
-
-        <tr>
           <td>Anunciante:</td>
           <td class="pl-5">{{anuncio.anunciante}}</td>
         </tr>
+
+        <tr>
+          <td>Valor:</td>
+          <td class="pl-5">{{anuncio.valor}}</td>
+        </tr>
       </table>
 
-      <div class="mt-3">
+      <div class="mt-3 mb-5 ">
       <span><a class="btn btn-primary mx-2 " href="{% url 'anuncio_editar' pk=anuncio.pk %}">Editar</a></span>
       
-      <span><a class="btn btn-primary mx-2" href="">Ver no Site</a><span>
+      <span><a class="btn btn-primary mx-2" href="{% url 'anuncio' pk=anuncio.pk %}">Ver no Site</a><span>
      </div>
 
      <!-- Botão para acionar modal -->
