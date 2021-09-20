@@ -1,6 +1,5 @@
 from django.db import models
 from django_resized import ResizedImageField
-from sorl.thumbnail import ImageField, get_thumbnail
 from django.conf import settings
 
 
