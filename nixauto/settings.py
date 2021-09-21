@@ -39,8 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'nix',
     'anunciante',
-    'crispy_forms',
-    'widget_tweaks',
+    'crispy_forms'
+    
     
 
 

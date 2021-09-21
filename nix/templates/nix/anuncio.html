@@ -6,7 +6,7 @@
 
       <!--<img class="img col-12 d-md-none" src="{{post.imagem1.url}}">-->
      <!-- <img class="img  img-fluid d-none d-md-inline col-4 " src="{{post.imagem1.url}}"> -->
-     <div id="carouselExampleControls" class="carousel slide col-7 d-none d-md-block" data-ride="carousel" style="border:1px solid gray;">
+     <div id="carouselExampleControls" class="carousel slide col-5 d-none d-md-block" data-ride="carousel" style="border:1px solid gray;">
   <div class="carousel-inner ">
     <div class="carousel-item active ">
       <img class="img  d-block  col-12  " src="{{post.imagem1.url}}" alt="Primeiro Slide" >
@@ -99,9 +99,10 @@
 
 
 
-      <div class="ml-5">
+      <div class="ml-5 col-5">
         <div class="h3 text-center pl-5 pt-3">Anuncio Id Nix-{{post.pk}}</div>
-      <table class="d-block  col-6 mb-5 ml-5 mt-5" >
+      <div>
+      <table class="d-block  col-6 mb-5  mt-5" >
         <tr  >
           <td >Ano:</td>
           <td class="pl-5">{{post.ano_modelo}}</td>
@@ -142,11 +143,13 @@
           <td class="pl-5">{{post.valor}}</td>
         </tr>
 
-        <tr>
-          <td>Descrição:</td>
-          <td class="pl-5">{{post.acessórios_opcionais}}</td>
-        </tr>
+        
+          
+       
       </table>
+      <div>Descrição:</div>
+      <p class="pl-5">{{post.acessórios_opcionais}}</p>
+    </div>
       <!-- Botoes padrao -->
       <span class="ml-4 pl-4 mt-5 d-none d-sm-block ">  
         <span class="p-1 ml-2"><a class="btn btn-success " href="https://api.whatsapp.com/send?phone=55{{post.contato}}&text=Olá, acabei de ver o veículo em seu site e gostaria de mais informações - {{post.marca}} {{post.modelo}} - R$ {{post.valor}}" target=_blank>Conversar via WhatsApp</a></span>

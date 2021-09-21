@@ -462,7 +462,7 @@
          {%for anuncio in posts %}
     <div class=" row    bg-light rounded mt-4 mx-auto p-3  " style="border: 1px solid red;">
 
-      <div id="carouselExampleControls" class="carousel slide col-7 d-none d-md-block" data-ride="carousel" style="border:1px solid gray;">
+      <div id="carouselExampleControls" class="carousel slide col-6 d-none d-md-block" data-ride="carousel" style="border:1px solid gray;">
   <div class="carousel-inner ">
     <div class="carousel-item active ">
       <img class="img  d-block  col-12  " src="{{anuncio.imagem1.url}}" alt="Primeiro Slide" >
@@ -555,7 +555,7 @@
 
 
 
-      <table class="d-inline  col-5 mt-5 ml-3 " >
+      <table class="d-inline  col-5 mt-3 ml-3 " >
         <tr >
           <td >Ano:</td>
           <td class="pl-5">{{anuncio.ano_fabricacao}}</td>
@@ -604,8 +604,8 @@
       <span><a class="btn btn-primary  mr-5 px-4" href="{% url 'anuncio' pk=anuncio.pk %}">Ver no Site</a><span>
     </div>
      
-<span class=""><!-- Botão para acionar modal -->
-<button type="button" class="btn btn-danger mt-4  ml-5 mr-5 py-3 float-right " data-toggle="modal" data-target="#modalExemplo">
+<span class="ml-5 mt-3 pl-5"><!-- Botão para acionar modal -->
+<button type="button" class="btn btn-danger mt-4  ml-5   float-right " data-toggle="modal" data-target="#modalExemplo">
   Excluir Anúncio
 </button></span>
 
@@ -667,7 +667,7 @@
         </span>
 
         <span class="m-auto">
-          <a class="btn btn-lg bg-primary" href="http://devnixauto.pythonanywhere.com/">Para continuar no site e ver todas os anúncios</a>
+          <a class="btn btn-lg bg-primary" href="{% url 'index' %}">Para continuar no site e ver todas os anúncios</a>
         </span>
         </div>
         {% endif %}
