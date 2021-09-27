@@ -1,12 +1,421 @@
-{% extends 'nix/base.html' %}
+<!doctype html>
+<html lang="pt-br">
+  <head>
 
-{% block content %}
+      
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta property="og:url"           content="http://127.0.0.1:8000/anuncianteanuncio/10/" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="NixAutos Classificados" />
+    <meta property="og:description"   content="NixAutos Classficados" />
+   
+
+    <!--Estilo Css -->
+    <link rel="stylesheet" href="{ static 'css/estilo.css' }">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Fontawesome CSS -->
+    <script src="https://kit.fontawesome.com/a69cec9c91.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+
+    <style type="text/css">
+
+      *{
+    margin:0;
+    padding:0;
+  }
+
+  body{
+    font-size: 1em;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    background: #e6e6e6;
+  }
+
+  #main{
+    width:1080px;
+    height:2000px;
+
+  }
+
+
+  /*Formatação Head */
+  .bg-header{
+    background-color: #8000ff;
+    padding: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom-right-radius: 10px;
+
+  }
+
+  #logo{
+    font-size: 1.5em;
+    padding: 10px;
+  }
+
+  .menu{
+    padding-right:200px;
+    padding-right: 0px;
+  }
+
+  /*Formatação Menu*/
+
+  a{
+    color:#f7b600;
+    text-decoration: none;
+
+  }
+
+  a:link, a:visited {
+    color:#f7b600;
+
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  #header a:link, #header a:visited {
+    color:#FFF;
+    padding: 6px 12px 6px 12px;
+  }
+
+  .btn-menu a:hover {
+    color:black;
+    background: #FFF;
+    text-decoration: none;
+    border-radius:40px;
+  }
+
+
+
+  /*Formatação coluna de busca*/
+
+
+  #col-busca{
+
+
+    margin-left: 0px;
+    margin-top: 0px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+  }
+
+  h3{
+    padding: 10px;
+
+  }
+
+  }
+
+  #anuncios{
+    float: right;
+    display: inline;
+    width: auto;
+
+
+  }
+
+  #caixa-selecao{
+    width: 200px;
+    margin-top: 5px;
+    margin-bottom:10px;
+    margin-left:10px;
+    padding:5px;
+    border-radius: 10px;
+  }
+
+  #ultima-caixa{
+    width: 230px;
+    margin-bottom:0px;
+    margin-left:22px;
+    padding:5px;
+    border-radius: 10px;
+
+  }
+
+  /*Formatação area de anuncios*/
+
+  .display-anuncios{
+    width:860px;
+    height:3000px;
+    display:inline;
+    float: right;
+    margin-top: 10px;
+    background: #CCC;
+    border-radius:40px;
+    border:1px solid red;
+
+  }
+
+  .titulo-anuncio{
+    /*border: 1px solid red;*/
+    text-align: center;
+    padding-top:5px;
+    margin-bottom: 5px;
+   }
+
+
+
+  .anuncio{
+    width:auto;
+    height: 50px;
+    margin-right:10px;
+    margin-bottom: 50px;
+
+
+  }
+
+
+
+
+
+
+
+  .formato-foto{
+    margin-left: 5px;
+    margin-right: 5px;
+    width:320px;
+    height:280px;
+    border:1px solid #CCC;
+    border-radius: 5px;
+  }
+
+  .formato-preco{
+    margin-left: 8px;
+
+
+  }
+  .botao{
+    width: 170px;
+    height: 25px;
+    border-radius: 10px;
+    margin-right: 15px;
+    font-style: bold;
+    background:#f7b600;
+    float: right;
+    display:block;
+
+  }
+
+  .botao-contato{
+    float: right;
+    display: block;
+    margin-right: 50px;
+    margin-top: 30px;
+    text-decoration: none;
+    border:1px solid red;
+  }
+
+
+
+  .botao a{
+    color:black;
+  }
+
+  .autor-anuncio{
+    width: 320px;
+    color:black;
+    font-style: bold;
+    font-size: 0.5em;
+    margin-left: 8px;
+    border-bottom: 5px;
+
+
+  }
+
+
+  /*Formatação de cores */
+
+  #branco{
+    color:white;
+  }
+
+
+  #vermelho{
+
+    border:1px solid black;
+
+  }
+
+  /*Formatação do Formulario*/
+
+
+
+
+
+  .linha{
+    color:black;
+  }
+
+  /*Formatação rodapé*/
+
+  #rodape{
+    width: 100%;
+    height:120px;
+    float:bottom;
+    background:  #8000ff;
+    border-top-right-radius:100px;
+  }
+   #rodape3{
+    float: bottom;
+   }
+
+  /*coluna anuncios*/
+
+  .coluna-anuncios{
+    width: 260px;
+    height:410px;
+    background:#f7b600;
+    margin-left: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+  } 
+
+
+  
+
+
+
+
+
+        #insta {
+                background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 0%, #fd5949 20%, #d6249f 60%, #285AEB 90%);
+                -webkit-background-clip: text;
+                /* Also define standard property for compatibility */
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+  
+               
+
+                border-color: black;
+  
+            }
+
+            .logo-midias{
+              float: right;
+            }
+
+
+
+    </style>
+
+    
+
+  </head>
+
+  <body class="w-auto mt-0" >
+    <!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="container-fluid mb-0 mt-0 " >
+      <div class="row bg-header mt-0 mb-0" >
+
+        <div class=" col-12 float-right bg-warning rounded my-2 py-1">
+            <span class=""></span>
+             <span class="  ">
+
+              <div class="sidebar-nav row  ">
+           {% if user.is_authenticated %}
+             <span class=" col-3     ">Olá,(a): {{ user.get_username }}</span>
+             <span class=" col-5  ">Acesse Aqui sua <a  class="btn btn-sm btn-primary p-02 ml-2 text-dark" href="{% url 'anunciante'%}?next={{request.path}}">Àrea do anunciante</a></span>
+             <span class=" col-4 ">Para sair Use:<a class="btn btn-sm btn-danger p-02 text-dark ml-2" href="{% url 'logout'%}?next={{request.path}}">Logout</a></span>
+
+           {% else %}
+             <span class="mx-auto my-2">Para acessar Área de Anunciante faça o  <a class="btn btn-sm btn-primary p-02 ml-2  text-dark" href="{% url 'login'%}?next={{request.path}}">Login</a></span>
+             <span class="mx-auto my-2">Ainda Não é Anunciante   <a class="btn btn-sm btn-primary p-02 ml-2  text-dark" href="{% url 'login'%}?next={{request.path}}">Torna-se Anunciante</a></span>
+
+           {% endif %} 
+          </div>
+
+        </span>
+
+          </div>
+
+      <nav class="navbar navbar-expand-md navbar-dark   col-12
+       mt-0    " >
+
+       <div class=" navbar-brand col-6 m-0 ml-0 p-0 mt-0">
+        <div class="m-0 p-0" id="logo">
+        <h1 class="m-0 p-0" id="branco">Auto<span style="color: black;  ">Nix</span></h1>
+        <h3 class="m-0 p-0" style="color: black;">Classifi<span id="branco">cados</span></h3>
+        </div>
+      </div>
+
+      <div class=" mt-5 ml-5 mb-4" style="float: right;" >
+        <!--Menu Hamburguer -->
+        <button class="navbar-toggler  bg-warning" data-toggle="collapse" data-target="#navegacao2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--Navegação -->
+        <div class="collapse navbar-collapse m-0 " id="navegacao2">
+            <ul class="navbar-nav m-auto">
+                <li class="nav-item ">
+                    <a href="http://127.0.0.1:8000/" class="nav-link btn btn-warning ml-5 text-dark">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="" class="nav-link btn btn-warning ml-5 text-dark">Fale Conosco</a>
+                </li>
+            </ul> 
+        </div>
+      </div>
+
+
+
+        
+
+
+    </nav>
+
+     <!-- Formulário inline -->
+      <div class=" col-12 d-block mb-0 p-0  " >
+         <form method="GET" class="mb-0" >
+        <input type="text"  class="form-control d-inline col-9   " placeholder="Pesquisar por TITULO MARCA MODELO ANO OU ANUNCIANTE" name="search" id="search">
+        <div class="input-group-prepend d-inline mr-4 col-2  "  style="float: right;">
+          <button class="btn btn-outline-light bg-warning text-dark " type="submit" id="button-addon1">Buscar</button>
+        </div>
+      </form>
+      </div>
+
+     
+     
+
+
+    
+      
+    </div>
+
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v12.0" nonce="DXGVI82z"></script>
     <div class=" row  bg-light rounded mt-4 mx-auto p-3  " style="border: 1px solid red;">
 
 
       <!--<img class="img col-12 d-md-none" src="{{post.imagem1.url}}">-->
      <!-- <img class="img  img-fluid d-none d-md-inline col-4 " src="{{post.imagem1.url}}"> -->
-     <div id="carouselExampleControls" class="carousel slide col-5 d-none d-md-block" data-ride="carousel" style="border:1px solid gray;">
+     <div id="carouselExampleControls" class="carousel slide col-5 d-none d-md-block " data-ride="carousel" style="border:1px solid gray; border-radius:10px;">
   <div class="carousel-inner ">
     <div class="carousel-item active ">
       <img class="img  d-block  col-12  " src="{{post.imagem1.url}}" alt="Primeiro Slide" >
@@ -52,7 +461,7 @@
 </div>
 
 <!--Responsivo para xs -->
-<div id="carouselExampleControls" class="carousel slide col-12 d-block d-md-none" data-ride="carousel" style="border:1px solid gray;">
+<div id="carouselExampleControls" class="carousel slide col-12 d-block d-md-none" data-ride="carousel" style="border:1px solid gray; border-radius:10px;">
   <div class="carousel-inner ">
     <div class="carousel-item active ">
       <img class="img  d-block  col-12  " src="{{post.imagem1.url}}" alt="Primeiro Slide" >
@@ -102,7 +511,7 @@
       <div class="ml-5 col-5">
         <div class="h3 text-center pl-5 pt-3">Anuncio Id Nix-{{post.pk}}</div>
       <div>
-      <table class="d-block  col-6 mb-5  mt-5" >
+      <table class="d-block  col-4   mt-5" >
         <tr  >
           <td >Ano:</td>
           <td class="pl-5">{{post.ano_modelo}}</td>
@@ -142,22 +551,19 @@
           <td>Valor:</td>
           <td class="pl-5">{{post.valor}}</td>
         </tr>
-
-        
-          
-       
       </table>
-      <div>Descrição:</div>
-      <p class="pl-5">{{post.acessórios_opcionais}}</p>
+
+      <div class="pl-1">Opcionais</div>
+      <div><p class="text-justify row d-block p-3" style="border-radius:10px; border:1px solid gray;">{{post.acessórios_opcionais}}</p> </div>
+       
+      
     </div>
       <!-- Botoes padrao -->
       <span class="ml-4 pl-4 mt-5 d-none d-sm-block ">  
         <span class="p-1 ml-2"><a class="btn btn-success " href="https://api.whatsapp.com/send?phone=55{{post.contato}}&text=Olá, acabei de ver o veículo em seu site e gostaria de mais informações - {{post.marca}} {{post.modelo}} - R$ {{post.valor}}" target=_blank>Conversar via WhatsApp</a></span>
         
       </span>
-      <span class="ml-4 pl-4 mt-5 d-none d-sm-block ">
-        <span class="p-1 ml-2"><a class="btn btn-primary " href="">Compartilhar Facebook</a></span>
-      </span>
+      <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F127.0.0.1%3A8000%2Fanuncianteanuncio%2F10%2F&layout=button_count&size=large&appId=989227741918595&width=133&height=28" width="133" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
     </div>
 
       
@@ -176,9 +582,34 @@
       <span class="p-1 ml-2 mt-3"><a class="btn btn-primary " href="">Compartilhar Facebook</a></span>
       </div>
 
-      <span class="  mt-5 mb-0 col-12"><a class="btn btn-primary " href="{% url 'anunciante' %}">Voltar</a></span>
+      <!-- Botão Voltar -->
+      
+
+       {% if user.is_authenticated %}
+            <span class="  mt-5 mb-0 col-12"><a class="btn btn-primary " href="{% url 'anunciante'%}">Voltar Àrea de Anunciante</a></span>
+
+           {% else %}
+             <span class="  mt-5 mb-0 col-12"><a class="btn btn-primary " href="http://127.0.0.1:8000/">Voltar</a></span>
+
+           {% endif %} 
 
 
      </div>
 
-{% endblock %}
+ <footer class="text-center bg-warning pb-3  " style="font-size: 1em">
+    <div class="pt-2 px-3" >Desenvolvido por Antherus Desenvolvimento Web</div>
+
+    <div style="font-size: 0.8em;">www.antherus.com.br</div>
+    <!-- Links Redes Sociais -->
+          <span class=" aling-self-center "  >
+          <!-- Link Instagram -->
+          <i class="fab fa-instagram   display-5 ml-3  "  id="insta" aria-hidden="true"></i><span class=" m-1">@antherus</span>
+
+          
+          </span>
+
+          <span  class="col-1 aling-self-center "  >
+            <!-- Link Facebook -->
+          <i class="fab fa-facebook-square display-5  mx-1 " style="color: #3b5998;">/antherus</i>
+          </span>
+  </footer>
