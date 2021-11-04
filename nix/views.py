@@ -1,10 +1,11 @@
 from django.shortcuts import render, get_object_or_404
 from django.shortcuts import HttpResponseRedirect, render, redirect
-from nix.forms import CriarAnuncioForm
+from nix.forms import CriarAnuncioForm, PropostaForm, CadastroForm
 from .models import Anuncio
 from django.db.models import Q
-
 import random 
+from django.conf import settings
+from django.core.mail import send_mail
 
 
 # Create your views here.
@@ -78,5 +79,25 @@ def anunciante (request):
     return  render(request, 'nix/area-anunciante.html',{'posts': posts})
 
 
+def proposta(request):
+    if request.method == 'POST':
+        formulario = PropostaForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            email_subject = f'New contact {formulario.cleaned_data["email"]}: {formulario.cleaned_data["subject"]}'
+            email_message = formulario.cleaned_data['message']
+            send_mail(email_subject, email_message, settings.CONTACT_EMAIL, settings.ADMIN_EMAIL)
+            return render(request, 'nix/formulario_propostas.html')
+    formulario = PropostaForm()
+    context = {'formulario': formulario}
+    return render(request, 'nix/formulario_propostas.html', context)
 
-
+def cadastro(request):
+    if request.method == 'POST':
+        cadastrados = CadastroForm(request.POST)
+        if cadastrados.is_valid():
+            cadastrados.save()
+            return redirect('anunciante')
+    cadastrados = CadastroForm()
+    contexto = {'cadastrados': cadastrados}
+    return render(request, 'nix/cadastrocnpj.html',{'cadastrados': cadastrados})    

@@ -8,8 +8,9 @@ from django.conf import settings
 
 class Anuncio(models.Model):
     TIPO = (
-        ('Carro', 'Carro'),
-        ('Moto', 'Moto'),
+        ('CARRO', 'CARRO'),
+        ('MOTO', 'MOTO'),
+        
     )
 
     MARCAS = (
@@ -254,3 +255,18 @@ class Anuncio(models.Model):
 
     def __str__(self):
         return self.marca
+
+class Proposta(models.Model):
+    email = models.EmailField()
+    subject = models.CharField(max_length=255)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.email
+
+class Cadastro(models.Model):
+    cnpj = models.CharField(max_length=14, null=False, blank=False)
+    razão_social = models.CharField(max_length=50, null=False, blank=False)
+    email = models.EmailField(null=False, blank=False)
+    whatsapp = models.CharField(max_length=11, null=False,blank=False)
+    nome_anunciante = models.CharField(max_length=15, null=False, blank=False)

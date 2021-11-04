@@ -27,6 +27,8 @@ urlpatterns = [
     path('anunciante',include('nix.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
     path('anunciante', include('anunciante.urls')),
+    path('proposta',include('nix.urls')),
+    path('cadastro', include('nix.urls')),
 
 ]
 
